@@ -1,4 +1,8 @@
 {
+  "page": {
+    "title": "Contact",
+    "subtitle": "contact"
+  },
   "data": [
     { "title": "Phone", "desc": "+852 5985 9007", "icon": "/images/icon/Icon_contact_phone.png" },
     { "title": "E-mail", "desc": "mobanyouxiang@163.com", "icon": "/images/icon/Icon_contact_email.png" },

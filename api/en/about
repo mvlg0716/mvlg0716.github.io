@@ -1,4 +1,8 @@
 {
+  "page": {
+    "title": "About",
+    "subtitle": "about"
+  },
   "data": {
     "about": {
       "profile": "ISGO Technology Trading (Hong Kong) Company Limited is a comprehensive technology company which specializes in the process of curved surface printing.",
