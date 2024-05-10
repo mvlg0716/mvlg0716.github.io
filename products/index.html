@@ -22,7 +22,7 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="Products">
+<meta property="og:title" content="ISGOHK">
 <meta property="og:url" content="https://www.isgohk.com/products/index.html">
 <meta property="og:site_name" content="ISGOHK">
 <meta property="og:locale" content="en_US">
@@ -33,7 +33,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Products - ISGOHK</title>
+  <title>ISGOHK</title>
 
   
 <!-- Fluid CSS
@@ -317,11 +317,15 @@ const NavHeaderApp = {
             key: 'en'
           },
           {
+            label: '日本語',
+            key: 'ja'
+          },
+          {
             label: '繁體中文',
             key: 'zh-HK'
           },
           {
-            label: '簡體中文',
+            label: '简体中文',
             key: 'zh-CN'
           },
         ] 
@@ -359,97 +363,41 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 
-  
+  <div id="product">
+  <!-- 
+  等待修改與維護，目前暫時停用該組件
+ -->
 
-<!-- 
-<style>
-@media (width < 768px) {
-  .row-title-bar-box {
-    margin: 0px;
-    padding-top: 1.6rem;
-    padding-bottom: 1.8rem;
-    height: 4.5rem;
-  }
-  .row-title-bar > .box {
-    height: 0rem;
-    display: flex;
-    justify-content: center;
-  }
-  .row-title-bar > .box > img {
-    height: 1.22rem;
-    width: 1.22rem;
-    margin-right: 10px;
-  }
-  .row-title-bar > .box > h3 {
-    font-size: 1.22rem;
-    padding: 0px !important;
-    line-height: 1.22rem;
-  }
-}
-
-</style>
-<div class="row-title-bar-box breadcrumbs_area">
-  <div class="container">   
-    <div class="row">
-      <div class="row-title-bar col-12">
-        <div class="box breadcrumb_content text-center">
-          <img src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15672243_1697851581.png?x-oss-process=image/resize,m_fixed,w_39,h_39,limit_0" srcset="/img/loading.gif" lazyload>
-          <h3 class="pt-md-3 text-uppercase">Products</h2>
-        </div> 
-      </div>
-    </div>
-  </div>         
-</div> -->
-
-
-
-<style>
-.banner-box > .banner-title {
-  color: white;
-  margin-top: 100px;
-}
-
-@media (width  < 768px) {
-  .banner-box > .banner-title {
-    margin-top: 0px;
-    font-size: 22px;
-  }
-}
-</style>
-
-<!--  -->
 <!-- hero banner section start -->
 <section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="banner-box hero_about_content">
-          <h2 class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
-            Products <br>
-            <span>ISGOHK</span></h2>
-          <!-- <ul class="d-flex wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">
-              <li><a href="/">Home</a></li>
-              <li>></li>
-              <li><a href="/about">About Us</a></li>
-          </ul> -->
+          <h2 
+            class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
+            style="color: white;"
+          >
+            {{ page.title }}<br>
+            <span>ISGOHK</span>
+          </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--  -->
 
 
-<!-- shop page section satrt -->
-<div class="shop_page_section shop_fullwidth">
-  <div class="container">
+  <!-- shop page section satrt -->
+  <div class="shop_page_section shop_fullwidth">
+    <div class="container">
       <div class="row">
-          <div class="col-12">
-              <div class="shop_fullwidth_inner">
-                  <div class="shop_gallery">
-                      <div class="row col-lg-9 col-md-10 m-md-auto">
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+        <div class="col-12">
+          <div class="shop_fullwidth_inner">
+            <div class="shop_gallery">
+              <div class="row col-lg-9 col-md-10 m-md-auto">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -477,37 +425,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-  
-    <article class="single_product">
-      <figure>
-        <div class="product_thumb">
-          <a href="/products/Product%202%2010/" target="_self">
-            <img src="/images/product/Product_2_10-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
-          </a>
-          <!-- <div class="label_product">
-            
-              <span class="label_sale">Sale</span> 
-          </div> -->
-          <!-- Date -->
-          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
-            background-color: white; text-align: center; line-height: 60px;">
-            <span style="color: black; font-size: 16px;">2024-05-07</span> 
-          </div> -->
-        </div>
-        <figcaption class="product_content">
-            <h4><a href="/products/Product%202%2010/">Leisure Chair Restaurant Back Sofa Office</a></h4>
-            <!-- <div class="price_box"> 
-                <span class="old_price">$399.99</span>
-                <span class="current_price">$129.99</span>
-            </div> -->
-        </figcaption>  
-      </figure>
-    </article>
-</div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -535,8 +454,37 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+  
+    <article class="single_product">
+      <figure>
+        <div class="product_thumb">
+          <a href="/products/Product%202%2010/" target="_self">
+            <img src="/images/product/Product_2_10-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
+          </a>
+          <!-- <div class="label_product">
+            
+              <span class="label_sale">Sale</span> 
+          </div> -->
+          <!-- Date -->
+          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
+            background-color: white; text-align: center; line-height: 60px;">
+            <span style="color: black; font-size: 16px;">2024-05-07</span> 
+          </div> -->
+        </div>
+        <figcaption class="product_content">
+            <h4><a href="/products/Product%202%2010/">Leisure Chair Restaurant Back Sofa Office</a></h4>
+            <!-- <div class="price_box"> 
+                <span class="old_price">$399.99</span>
+                <span class="current_price">$129.99</span>
+            </div> -->
+        </figcaption>  
+      </figure>
+    </article>
+</div>
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -564,8 +512,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -593,8 +541,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -622,95 +570,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-  
-    <article class="single_product">
-      <figure>
-        <div class="product_thumb">
-          <a href="/products/Product%202%206/" target="_self">
-            <img src="/images/product/Product_2_6-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
-          </a>
-          <!-- <div class="label_product">
-            
-              <span class="label_sale">Sale</span> 
-          </div> -->
-          <!-- Date -->
-          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
-            background-color: white; text-align: center; line-height: 60px;">
-            <span style="color: black; font-size: 16px;">2024-05-07</span> 
-          </div> -->
-        </div>
-        <figcaption class="product_content">
-            <h4><a href="/products/Product%202%206/">Leisure Chair Restaurant Back Sofa Office</a></h4>
-            <!-- <div class="price_box"> 
-                <span class="old_price">$399.99</span>
-                <span class="current_price">$129.99</span>
-            </div> -->
-        </figcaption>  
-      </figure>
-    </article>
-</div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-  
-    <article class="single_product">
-      <figure>
-        <div class="product_thumb">
-          <a href="/products/Product%202%207/" target="_self">
-            <img src="/images/product/Product_2_7-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
-          </a>
-          <!-- <div class="label_product">
-            
-              <span class="label_sale">Sale</span> 
-          </div> -->
-          <!-- Date -->
-          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
-            background-color: white; text-align: center; line-height: 60px;">
-            <span style="color: black; font-size: 16px;">2024-05-07</span> 
-          </div> -->
-        </div>
-        <figcaption class="product_content">
-            <h4><a href="/products/Product%202%207/">Leisure Chair Restaurant Back Sofa Office</a></h4>
-            <!-- <div class="price_box"> 
-                <span class="old_price">$399.99</span>
-                <span class="current_price">$129.99</span>
-            </div> -->
-        </figcaption>  
-      </figure>
-    </article>
-</div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-  
-    <article class="single_product">
-      <figure>
-        <div class="product_thumb">
-          <a href="/products/Product%202%208/" target="_self">
-            <img src="/images/product/Product_2_8-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
-          </a>
-          <!-- <div class="label_product">
-            
-              <span class="label_sale">Sale</span> 
-          </div> -->
-          <!-- Date -->
-          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
-            background-color: white; text-align: center; line-height: 60px;">
-            <span style="color: black; font-size: 16px;">2024-05-07</span> 
-          </div> -->
-        </div>
-        <figcaption class="product_content">
-            <h4><a href="/products/Product%202%208/">Leisure Chair Restaurant Back Sofa Office</a></h4>
-            <!-- <div class="price_box"> 
-                <span class="old_price">$399.99</span>
-                <span class="current_price">$129.99</span>
-            </div> -->
-        </figcaption>  
-      </figure>
-    </article>
-</div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -738,8 +599,124 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+  
+    <article class="single_product">
+      <figure>
+        <div class="product_thumb">
+          <a href="/products/Product%202%206/" target="_self">
+            <img src="/images/product/Product_2_6-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
+          </a>
+          <!-- <div class="label_product">
+            
+              <span class="label_sale">Sale</span> 
+          </div> -->
+          <!-- Date -->
+          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
+            background-color: white; text-align: center; line-height: 60px;">
+            <span style="color: black; font-size: 16px;">2024-05-07</span> 
+          </div> -->
+        </div>
+        <figcaption class="product_content">
+            <h4><a href="/products/Product%202%206/">Leisure Chair Restaurant Back Sofa Office</a></h4>
+            <!-- <div class="price_box"> 
+                <span class="old_price">$399.99</span>
+                <span class="current_price">$129.99</span>
+            </div> -->
+        </figcaption>  
+      </figure>
+    </article>
+</div>
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+  
+    <article class="single_product">
+      <figure>
+        <div class="product_thumb">
+          <a href="/products/Product%202%207/" target="_self">
+            <img src="/images/product/Product_2_7-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
+          </a>
+          <!-- <div class="label_product">
+            
+              <span class="label_sale">Sale</span> 
+          </div> -->
+          <!-- Date -->
+          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
+            background-color: white; text-align: center; line-height: 60px;">
+            <span style="color: black; font-size: 16px;">2024-05-07</span> 
+          </div> -->
+        </div>
+        <figcaption class="product_content">
+            <h4><a href="/products/Product%202%207/">Leisure Chair Restaurant Back Sofa Office</a></h4>
+            <!-- <div class="price_box"> 
+                <span class="old_price">$399.99</span>
+                <span class="current_price">$129.99</span>
+            </div> -->
+        </figcaption>  
+      </figure>
+    </article>
+</div>
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+  
+    <article class="single_product">
+      <figure>
+        <div class="product_thumb">
+          <a href="/products/Product%202%208/" target="_self">
+            <img src="/images/product/Product_2_8-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
+          </a>
+          <!-- <div class="label_product">
+            
+              <span class="label_sale">Sale</span> 
+          </div> -->
+          <!-- Date -->
+          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
+            background-color: white; text-align: center; line-height: 60px;">
+            <span style="color: black; font-size: 16px;">2024-05-07</span> 
+          </div> -->
+        </div>
+        <figcaption class="product_content">
+            <h4><a href="/products/Product%202%208/">Leisure Chair Restaurant Back Sofa Office</a></h4>
+            <!-- <div class="price_box"> 
+                <span class="old_price">$399.99</span>
+                <span class="current_price">$129.99</span>
+            </div> -->
+        </figcaption>  
+      </figure>
+    </article>
+</div>
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+  
+    <article class="single_product">
+      <figure>
+        <div class="product_thumb">
+          <a href="/products/Product%202%209/" target="_self">
+            <img src="/images/product/Product_2_9-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
+          </a>
+          <!-- <div class="label_product">
+            
+              <span class="label_sale">Sale</span> 
+          </div> -->
+          <!-- Date -->
+          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
+            background-color: white; text-align: center; line-height: 60px;">
+            <span style="color: black; font-size: 16px;">2024-05-07</span> 
+          </div> -->
+        </div>
+        <figcaption class="product_content">
+            <h4><a href="/products/Product%202%209/">Leisure Chair Restaurant Back Sofa Office</a></h4>
+            <!-- <div class="price_box"> 
+                <span class="old_price">$399.99</span>
+                <span class="current_price">$129.99</span>
+            </div> -->
+        </figcaption>  
+      </figure>
+    </article>
+</div>
+                
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6">
   
     <article class="single_product">
       <figure>
@@ -767,46 +744,17 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </figure>
     </article>
 </div>
-                        
-                          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-  
-    <article class="single_product">
-      <figure>
-        <div class="product_thumb">
-          <a href="/products/Product%203/" target="_self">
-            <img src="/images/product/Product_3-A.jpg" srcset="/img/loading.gif" lazyload alt="Leisure Chair Restaurant Back Sofa Office">
-          </a>
-          <!-- <div class="label_product">
-            
-              <span class="label_sale">Sale</span> 
-          </div> -->
-          <!-- Date -->
-          <!-- <div class="border" style="position: absolute; top: -10px; left: -10px; width: 120px; height: 60px; 
-            background-color: white; text-align: center; line-height: 60px;">
-            <span style="color: black; font-size: 16px;">2024-05-07</span> 
-          </div> -->
-        </div>
-        <figcaption class="product_content">
-            <h4><a href="/products/Product%203/">Leisure Chair Restaurant Back Sofa Office</a></h4>
-            <!-- <div class="price_box"> 
-                <span class="old_price">$399.99</span>
-                <span class="current_price">$129.99</span>
-            </div> -->
-        </figcaption>  
-      </figure>
-    </article>
-</div>
-                        
-                      </div>
-                  </div>
+                
               </div>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
   </div>
-</div>
-<!-- shop page section end -->
-<div style="margin-bottom: 40px;">
-
+  <!-- shop page section end -->
+  <div style="margin-bottom: 40px;">
+    
   
   <div class="loding_bar">
     <ul class="d-flex justify-content-center">
@@ -824,7 +772,36 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
   </div>
 
 
+  </div>
 </div>
+
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        page: {
+          title: '',
+          subtitle: ''
+        }
+      }
+    },
+    methods: {
+      renderList() {
+        let _this = this;
+        $.ajax({
+          url: ISGOHK.API.i18n('/product'),
+          dataType: 'json',
+          success(res) {
+            _this.page = res.page;
+          }
+        });
+      }
+    },
+    mounted() {
+      flushCenter.add(this.renderList);
+    },
+  }).mount('#product');
+  </script>
 
   
     

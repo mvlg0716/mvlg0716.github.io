@@ -22,7 +22,7 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="Contact US">
+<meta property="og:title" content="ISGOHK">
 <meta property="og:url" content="https://www.isgohk.com/contact/index.html">
 <meta property="og:site_name" content="ISGOHK">
 <meta property="og:locale" content="en_US">
@@ -33,7 +33,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Contact US - ISGOHK</title>
+  <title>ISGOHK</title>
 
   
 <!-- Fluid CSS
@@ -317,11 +317,15 @@ const NavHeaderApp = {
             key: 'en'
           },
           {
+            label: '日本語',
+            key: 'ja'
+          },
+          {
             label: '繁體中文',
             key: 'zh-HK'
           },
           {
-            label: '簡體中文',
+            label: '简体中文',
             key: 'zh-CN'
           },
         ] 
@@ -359,47 +363,31 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 
-  
+  <div id="contact">
+  <!-- 
+  等待修改與維護，目前暫時停用該組件
+ -->
 
-
-
-<style>
-.banner-box > .banner-title {
-  color: white;
-  margin-top: 100px;
-}
-
-@media (width  < 768px) {
-  .banner-box > .banner-title {
-    margin-top: 0px;
-    font-size: 22px;
-  }
-}
-</style>
-
-<!--  -->
 <!-- hero banner section start -->
 <section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="banner-box hero_about_content">
-          <h2 class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
-            Contact US <br>
-            <span>ISGOHK</span></h2>
-          <!-- <ul class="d-flex wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">
-              <li><a href="/">Home</a></li>
-              <li>></li>
-              <li><a href="/about">About Us</a></li>
-          </ul> -->
+          <h2 
+            class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
+            style="color: white;"
+          >
+            {{ page.title }}<br>
+            <span>ISGOHK</span>
+          </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--  -->
 
-<!-- 
+  <!-- 
 <style>
 @media (width < 768px) {
   .row-title-bar-box {
@@ -432,13 +420,13 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       <div class="row-title-bar col-12">
         <div class="box breadcrumb_content text-center">
           <img src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15672243_1697851581.png?x-oss-process=image/resize,m_fixed,w_39,h_39,limit_0" srcset="/img/loading.gif" lazyload>
-          <h3 class="pt-md-3 text-uppercase">Contact US</h2>
+          <h3 class="pt-md-3 text-uppercase"></h2>
         </div> 
       </div>
     </div>
   </div>         
 </div> -->
-<style scoped>
+  <style scoped>
 .letter-space-1 {
   letter-spacing: 0.06rem !important;
 }
@@ -446,24 +434,31 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 <div id="contact-bar" class="container pt-5 pb-5">
   <div class="row d-md-flex justify-content-center border-0">
-      <div class="card m-3 col-md-3 shadow pt-5 pb-5" style="width: 18rem;"
-        v-for="item of contact.list"
-      >
-        <img class="mt-5 mb-5 m-auto" :src="item.icon" alt=""
-          style="height: 100px;"
-          lazyload="false">
-        <div class="card-body text-center">
-          <h4><b class="letter-space-1">{{ item.title }}</b></h4>
-          <p class="card-text">{{ item.desc }}</p>
-        </div>
+    <div class="card m-3 col-md-3 shadow pt-5 pb-5" style="width: 18rem;"
+      v-for="item of contact.list"
+    >
+      <img class="mt-5 mb-5 m-auto" :src="item.icon" alt=""
+        style="height: 100px;"
+        lazyload="false">
+      <div class="card-body text-center">
+        <h4><b class="letter-space-1">{{ item.title }}</b></h4>
+        <p class="card-text">{{ item.desc }}</p>
       </div>
+    </div>
   </div>
 </div>
+
+</div>
+
 
 <script>
 Vue.createApp({
   data() {
     return {
+      page: {
+        title: '',
+        subtitle: ''
+      },
       contact: {
         list: []
       }
@@ -476,6 +471,7 @@ Vue.createApp({
         url: ISGOHK.API.i18n('/contact'),
         dataType: 'json',
         success(res) {
+          _this.page = res.page;
           _this.contact.list = res.data;
         }
       });
@@ -484,9 +480,8 @@ Vue.createApp({
   mounted() {
     flushCenter.add(this.renderList);
   },
-}).mount('#contact-bar');
+}).mount('#contact');
 </script>
-
 
   
     
