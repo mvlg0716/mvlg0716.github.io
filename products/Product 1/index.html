@@ -160,13 +160,15 @@ LanguageUtil.init();
 <body>
   
 
-  <style>
+  <div class="body_overlay"></div>
+
+<style>
 .pc-header {
-  width: 1200px;
+  /* width: 1200px; */
   height: 7rem; line-height: 3rem; margin-top: -2rem;
   position: fixed; 
   z-index: 100; background-color: rgb(39, 39, 39);  opacity: 0.85; 
-  width: 100vw;
+  width: 100%;
 }
 .pc-header-font {
   color: white !important;
@@ -196,20 +198,12 @@ LanguageUtil.init();
     margin-top: -8px;
     font-size: 24px;
   }
-  /* .canvas_open {
-    margin-top: -15px;
-  } */
   .canvas_open a {
     color: white;
   }
 }
 
 @media (width  < 768px) {
-  /* .pc-header {
-    margin-top: -15px;
-    line-height: 24px;
-    height: 80px;
-  }  */
   .pc-header {
     position: relative; 
     padding-bottom: 10px;
@@ -222,9 +216,6 @@ LanguageUtil.init();
 }
 
 </style>
-
-
-<div class="body_overlay"></div>
 
 
 <div id="app-header">
@@ -300,62 +291,65 @@ LanguageUtil.init();
   <!--header area end-->
 </div>
 
-<script>
-const NavHeaderApp = {
-  data() {
-    return {
-      navigation: {
-        data: [],
-      },
-      language: {
-        list: [
-          {
-            label: 'English',
-            key: 'en'
-          },
-          {
-            label: '日本語',
-            key: 'ja'
-          },
-          {
-            label: '繁體中文',
-            key: 'zh-HK'
-          },
-          {
-            label: '简体中文',
-            key: 'zh-CN'
-          },
-        ] 
-      }
-    }
-  },
-  methods: {
-    changeLanguage(lang) {
-      LanguageUtil.set(lang.key);
-      ISGOHK.LocalStorage.set('lang', lang.key);
-      flushCenter.flush();
-    },
-    renderNavList() {
-      let _this = this;
-      $.ajax({
-        url: ISGOHK.API.i18n('/nav'),
-        dataType: 'json',
-        success(res) {
-          _this.navigation.data = res.data.map(nav => {
-            nav.link = ISGOHK.Link.i18n(nav.link);
-            return nav;
-          });
-        }
-      });
-    }
-  },
-  mounted() {
-    flushCenter.add(this.renderNavList);
-  }
-}
 
-Vue.createApp(NavHeaderApp).mount('#app-header');
-</script>
+<script>
+  const NavHeaderApp = {
+    data() {
+      return {
+        navigation: {
+          data: [],
+        },
+        language: {
+          list: [
+            {
+              label: 'English',
+              key: 'en'
+            },
+            {
+              label: '日本語',
+              key: 'ja'
+            },
+            {
+              label: '繁體中文',
+              key: 'zh-HK'
+            },
+            {
+              label: '简体中文',
+              key: 'zh-CN'
+            },
+          ] 
+        }
+      }
+    },
+    methods: {
+      changeLanguage(lang) {
+        LanguageUtil.set(lang.key);
+        ISGOHK.LocalStorage.set('lang', lang.key);
+        flushCenter.flush();
+      },
+      renderNavList() {
+        let _this = this;
+        $.ajax({
+          url: ISGOHK.API.i18n('/nav'),
+          dataType: 'json',
+          success(res) {
+            _this.navigation.data = res.data.map(nav => {
+              nav.link = ISGOHK.Link.i18n(nav.link);
+              return nav;
+            });
+          }
+        });
+      }
+    },
+    mounted() {
+      flushCenter.add(this.renderNavList);
+    }
+  }
+  
+  Vue.createApp(NavHeaderApp).mount('#app-header');
+  </script>
+
+
 
 
 
