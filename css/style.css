@@ -6969,12 +6969,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /* Banner */
 .banner-box > .banner-title {
   color: white;
-  margin-top: 3.5rem;
+  padding-top: 3.5rem;
 }
 
-@media (width  < 768px) {
+@media only screen and (max-width: 767px) {
   .banner-box > .banner-title {
-    margin-top: 0px;
-    font-size: 22px;
+    padding-top: 0;
   }
 }

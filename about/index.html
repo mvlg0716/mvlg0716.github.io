@@ -38,8 +38,8 @@
   
 <!-- Fluid CSS
   ========================================== -->
-<!-- <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<!--
 
 
  -->
@@ -54,21 +54,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-
-
-
-
 <!-- ==========================================
   End Fluid CSS -->
 
 <!-- New CSS
    -->
-<link  rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
+<!-- <link  rel="stylesheet" href="/css/vendor/bootstrap.min.css" /> -->
 <link  rel="stylesheet" href="/css/swiper-bundle.min.css" />
 <link  rel="stylesheet" href="/css/slick.css" />
 <link  rel="stylesheet" href="/css/ionicons.min.css" />
@@ -80,6 +71,7 @@
 <link  rel="stylesheet" href="/css/magnific-popup.css" />
 <link  rel="stylesheet" href="/css/jquery-ui.min.css" />
 <link  rel="stylesheet" href="/css/style.css" />
+
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
@@ -152,18 +144,6 @@ LanguageUtil.init();
   
 
   <style>
-
-/* .pc-header-font {
-  color: black;
-}
-*/
-
-/* .pc-header {
-  width: 1200px;
-  height: 7rem; line-height: 3rem; margin-top: -1.5rem;
-  position: fixed; z-index: 100; background-color: rgb(39, 39, 39);  opacity: 0.85; 
-  width: 100vw;
-} */
 .pc-header {
   width: 1200px;
   height: 7rem; line-height: 3rem; margin-top: -2rem;
@@ -412,11 +392,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 <div id="about">
-  <!-- 
-  等待修改與維護，目前暫時停用該組件
- -->
-
-<!-- hero banner section start -->
+  <!-- hero banner section start -->
 <section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
   <div class="container">
     <div class="row">
@@ -424,7 +400,6 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
         <div class="banner-box hero_about_content">
           <h2 
             class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="color: white;"
           >
             {{ page.title }}<br>
             <span>ISGOHK</span>
@@ -824,66 +799,51 @@ Vue.createApp({
   </div>         
 </div>
 <style scoped>
-.item-img {
+.box-sq-75px {
   width: 75px;
   height: 75px;
 }
-/* .item-img-frame {
-    width: 200px;
-    height: 160px;
-} */
-.item-txt-frame {
-  /* width: 200px;
-  height: 280px; */
-  min-height: 200px;
-  min-width: 200px;
-}
-.item-box {
-    /* width: 300px; */
-    
+.sbox-sq-200px {
   min-height: 200px;
   min-width: 200px;
 }
 </style>
 
 
-
-<style scoped>
-@media (width > 848px) {
-  .about-slogan-bar {
-    display: flex;
-  }
-}
-
-@media (width <= 848) {
-
-}
-</style>
 
 <div class="container">
   <div class="row d-md-flex justify-content-center border-0 pt-4 pb-4">
     
-      <div class="card m-3 col-md-3 shadow" style="width: 18rem;">
-        <img class="card-img-top mt-5 mb-3 m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673836_1697868650.png?x-oss-process=image/resize,m_fixed,w_75,h_77,limit_0" srcset="/img/loading.gif" lazyload alt=""
-          style="width: 75px;height: 75px;">
+      <div class="card m-3 p-2 col-md-3 shadow"
+        style="max-width: 18rem;">
+        <div class="card-img-top m-auto d-flex" 
+          style="padding: 3rem 3rem 1rem 3rem;">
+          <img class="box-sq-75px m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673836_1697868650.png?x-oss-process=image/resize,m_fixed,w_75,h_77,limit_0" srcset="/img/loading.gif" lazyload alt="">
+        </div>
         <div class="card-body text-center">
           <h4><b>Mission</b></h4>
           <p class="card-text">Our mission is to be the leading environmentally friendly aluminum can printing company, committed to providing high-quality printing solutions while being responsible for environmental protection.</p>
         </div>
       </div>
     
-      <div class="card m-3 col-md-3 shadow" style="width: 18rem;">
-        <img class="card-img-top mt-5 mb-3 m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673875_1697868868.png?x-oss-process=image/resize,m_fixed,w_76,h_72,limit_0" srcset="/img/loading.gif" lazyload alt=""
-          style="width: 75px;height: 75px;">
+      <div class="card m-3 p-2 col-md-3 shadow"
+        style="max-width: 18rem;">
+        <div class="card-img-top m-auto d-flex" 
+          style="padding: 3rem 3rem 1rem 3rem;">
+          <img class="box-sq-75px m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673875_1697868868.png?x-oss-process=image/resize,m_fixed,w_76,h_72,limit_0" srcset="/img/loading.gif" lazyload alt="">
+        </div>
         <div class="card-body text-center">
           <h4><b>Vision</b></h4>
           <p class="card-text">Our vision is to be the best in the industry and lead the future of environmentally friendly aluminum can printing.</p>
         </div>
       </div>
     
-      <div class="card m-3 col-md-3 shadow" style="width: 18rem;">
-        <img class="card-img-top mt-5 mb-3 m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673902_1697868989.png?x-oss-process=image/resize,m_fixed,w_69,h_77,limit_0" srcset="/img/loading.gif" lazyload alt=""
-          style="width: 75px;height: 75px;">
+      <div class="card m-3 p-2 col-md-3 shadow"
+        style="max-width: 18rem;">
+        <div class="card-img-top m-auto d-flex" 
+          style="padding: 3rem 3rem 1rem 3rem;">
+          <img class="box-sq-75px m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673902_1697868989.png?x-oss-process=image/resize,m_fixed,w_69,h_77,limit_0" srcset="/img/loading.gif" lazyload alt="">
+        </div>
         <div class="card-body text-center">
           <h4><b>Core values</b></h4>
           <p class="card-text">Environmental awareness, Excellent quality, Technological innovation and Sustainable development.</p>

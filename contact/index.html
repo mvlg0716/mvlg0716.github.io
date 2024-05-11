@@ -38,8 +38,8 @@
   
 <!-- Fluid CSS
   ========================================== -->
-<!-- <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<!--
 
 
  -->
@@ -54,21 +54,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-
-
-
-
 <!-- ==========================================
   End Fluid CSS -->
 
 <!-- New CSS
    -->
-<link  rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
+<!-- <link  rel="stylesheet" href="/css/vendor/bootstrap.min.css" /> -->
 <link  rel="stylesheet" href="/css/swiper-bundle.min.css" />
 <link  rel="stylesheet" href="/css/slick.css" />
 <link  rel="stylesheet" href="/css/ionicons.min.css" />
@@ -80,6 +71,7 @@
 <link  rel="stylesheet" href="/css/magnific-popup.css" />
 <link  rel="stylesheet" href="/css/jquery-ui.min.css" />
 <link  rel="stylesheet" href="/css/style.css" />
+
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
@@ -152,18 +144,6 @@ LanguageUtil.init();
   
 
   <style>
-
-/* .pc-header-font {
-  color: black;
-}
-*/
-
-/* .pc-header {
-  width: 1200px;
-  height: 7rem; line-height: 3rem; margin-top: -1.5rem;
-  position: fixed; z-index: 100; background-color: rgb(39, 39, 39);  opacity: 0.85; 
-  width: 100vw;
-} */
 .pc-header {
   width: 1200px;
   height: 7rem; line-height: 3rem; margin-top: -2rem;
@@ -364,11 +344,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
   <div id="contact">
-  <!-- 
-  等待修改與維護，目前暫時停用該組件
- -->
-
-<!-- hero banner section start -->
+  <!-- hero banner section start -->
 <section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
   <div class="container">
     <div class="row">
@@ -376,7 +352,6 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
         <div class="banner-box hero_about_content">
           <h2 
             class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="color: white;"
           >
             {{ page.title }}<br>
             <span>ISGOHK</span>
@@ -434,11 +409,12 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 <div id="contact-bar" class="container pt-5 pb-5">
   <div class="row d-md-flex justify-content-center border-0">
-    <div class="card m-3 col-md-3 shadow pt-5 pb-5" style="width: 18rem;"
+    <div class="card m-3 col-md-3 shadow pt-5 pb-5" 
+      style="max-width: 18rem; height: 350px;"
       v-for="item of contact.list"
     >
-      <img class="mt-5 mb-5 m-auto" :src="item.icon" alt=""
-        style="height: 100px;"
+      <img class="mt-5 mb-5 pb-4 pt-4 m-auto" :src="item.icon" alt=""
+        style="height: 150px;"
         lazyload="false">
       <div class="card-body text-center">
         <h4><b class="letter-space-1">{{ item.title }}</b></h4>
