@@ -29,7 +29,7 @@
 <meta property="og:description" content="Product 1. In elit risus, volutpat sed vestibulum sit amet, bibendum in lorem. Etiam aliquet convallis nibh at tempus. Proin gravida tincidunt egestas. Curabitur porta nibh ac enim semper, vitae preti">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-19T03:08:02.760Z">
-<meta property="article:modified_time" content="2024-08-19T03:08:02.760Z">
+<meta property="article:modified_time" content="2024-08-19T08:27:58.397Z">
 <meta property="article:author" content="You Yi">
 <meta property="article:tag" content="Chair">
 <meta property="article:tag" content="Underwear">
@@ -390,6 +390,24 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
   
 
+<style>
+.post-frame {
+  padding-top: 100px;
+}
+
+@media (width < 750px) {
+  .post-frame {
+    padding-top: 20px;
+  }
+}
+
+</style>
+
+
+  
+
+
+
 
 <style scoped>
 .post-slider-img {
@@ -443,7 +461,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 <div class="product_details_section">
   <div class="container">
       <div class="row">
-          <div class="col-lg-7">
+          <div class="col-lg-7 m-auto">
               <div class="product_details_left">
                   <form action="#">
                       <div class="product_details_title">
@@ -458,28 +476,6 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
                   </form>
               </div>
           </div>
-          <div class="col-lg-5">
-              <div class="product_details_right">
-                  <div class="product_d_meta">
-                      <span>SKU: N/A<br>
-                      Categories: Fashion, Under wear<br>
-                      Tag: Chair, Underwear, Bikini, Sexy, Hot Trend<br>
-                      Product ID: 6</span>
-                  </div>
-                  <!-- <div class="product_variant_quantity d-flex align-items-center">
-                      <div class="pro-qty border">
-                          <input min="1" max="100" type="tex" value="1">
-                      </div>
-                      <button class="btn btn-link" type="submit">add to cart</button>  
-                  </div>
-                  <div class=" product_d_action">
-                     <ul class="d-flex">
-                         <li><a href="#" title="Add to wishlist"> <img src="assets/img/icon/heart.png" srcset="/img/loading.gif" lazyload alt=""> Add to Wishlist <i class="ion-android-arrow-forward"></i></a></li>
-                         <li><a href="#" title="Add to wishlist"><i class="ion-android-arrow-back"></i> ADD TO COMPARE</a></li>
-                     </ul>
-                  </div> -->
-              </div>
-          </div>
       </div>
   </div>
 </div>
@@ -492,9 +488,9 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
           <div class="col-12">
               <div class="product_d_inner">   
                   <div class="product_info_button">    
-                      <ul class="nav" role="tablist" id="nav-tab">
+                      <ul class="nav" role="tablist">
                         <li >
-                            <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Description</a>
+                          <a class="active" href="">Order</a>
                         </li>
                       </ul>
                   </div>
@@ -542,6 +538,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       </div>
   </div>    
 </div>  
+
+
 
 
   

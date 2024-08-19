@@ -5,9 +5,12 @@
     { "name": "服務", "link": "/services" },
     { "name": "公司介紹", "link": "/about" },
     { 
-      "name": "合作企業", "link": false, 
+      "name": "合作夥伴", "link": false, 
       "menu": [
-        { "name": "VM Sports", "link": "/vmsport" }
+        { "name": "顺德艾司科", "link": "http://www.gdisgo.com/" },
+        { "name": "VM Sports", "link": "/vmsport" },
+        { "name": "逸易升健康產業", "link": "/" },
+        { "name": "灰常越野", "link": "http://www.verymuchsport.com" }
       ]
     },
     { "name": "聯絡我們", "link": "/contact" }
