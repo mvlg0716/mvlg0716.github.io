@@ -1,0 +1,33 @@
+{
+  "page": {
+    "title": "About",
+    "subtitle": "about"
+  },
+  "data": {
+    "about": {
+      "profile": "ISGO Technology Trading (Hong Kong) Company Limited is a comprehensive technology company which specializes in the process of curved surface printing.",
+      "detail": [
+        {
+          "title": "About Us",
+          "content": "We are a multifaceted company dedicated to empowering individuals and businesses through a unique blend of learning, creativity, and communication. Our mission is to foster personal growth, enhance brand identity, and facilitate effective communication through our diverse offerings."
+        },
+        {
+          "title": "Mission and Vision",
+          "content": "Mission:<br>To empower individuals and businesses through transformative learning experiences, innovative design solutions, and high-quality printing services. We strive to foster personal growth, enhance brand identity, and facilitate effective communication through our diverse offerings.<br><br>Vision:<br>To be a leading provider of holistic solutions that bridge the gap between personal development, creative expression, and professional success. We envision a world where individuals are empowered to reach their full potential and businesses thrive through impactful branding and communication strategies."
+        },
+        {
+          "title": "Our offerings include",
+          "content": "Workshops & Courses: We offer a range of workshops and courses, from personal development and psychology to business strategy and creative thinking. Our programs are designed to equip individuals with the knowledge, skills, and tools they need to succeed in their personal and professional lives.<br>Packaging Design: Our team of experienced designers creates stunning and functional packaging solutions that elevate your brand and captivate your target audience. We understand the importance of first impressions and strive to create packaging that reflects your brand's values and resonates with your customers.<br>Printing Services: We provide high-quality printing services for a wide range of needs, from aluminum cans and bottle to packaging. Our commitment to quality ensures that your printed materials make a lasting impression."
+        },
+        {
+          "title": "What sets us apart",
+          "content": "Holistic Approach: We believe in a holistic approach to personal and professional development. Our programs and services are designed to address the needs of the whole person, fostering both personal and professional growth.<br>Innovation & Creativity: We are passionate about innovation and creativity. We constantly explore new ideas and technologies to deliver cutting-edge solutions that meet the evolving needs of our clients.<br>Commitment to Excellence: We are committed to providing the highest quality products and services. We believe in exceeding expectations and building lasting relationships with our clients."
+        },
+        {
+          "title": "",
+          "content": "<b>Contact us on our journey to empower individuals and businesses to reach their full potential.</b>"
+        }
+      ]
+    }
+  }
+}

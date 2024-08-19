@@ -1,0 +1,11 @@
+{
+  "page": {
+    "title": "Contact Us",
+    "subtitle": "contact"
+  },
+  "data": [
+    { "title": "Phone", "desc": "+852 59859007", "icon": "/images/icon/Icon_contact_phone.png" },
+    { "title": "E-mail", "desc": " Isgott.hk@gmail.com", "icon": "/images/icon/Icon_contact_email.png" },
+    { "title": "Address", "desc": "Room 33, 5/F, Shing King Industrial Building, 206-208 Choi Hung Road, San Po Kong, Kowloon City", "icon": "/images/icon/Icon_contact_location.png" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "name": "主页", "link": "/" },
+    { "name": "产品", "link": "/products" },
+    { "name": "介绍", "link": "/about" },
+    { "name": "联系", "link": "/contact" }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "data": [
+    { "name": "首頁", "link": "/" },
+    { "name": "產品", "link": "/products" },
+    { "name": "服務", "link": "/services" },
+    { "name": "公司介紹", "link": "/about" },
+    { 
+      "name": "合作企業", "link": false, 
+      "menu": [
+        { "name": "VM Sports", "link": "/vmsport" }
+      ]
+    },
+    { "name": "聯絡我們", "link": "/contact" }
+  ]
+}

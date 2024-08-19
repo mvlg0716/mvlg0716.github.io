@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "name": "ホーム", "link": "/" },
+    { "name": "商品", "link": "/products" },
+    { "name": "会社", "link": "/about" },
+    { "name": "連絡方法", "link": "/contact" }
+  ]
+}

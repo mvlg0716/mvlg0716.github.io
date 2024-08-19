@@ -1,0 +1,15 @@
+{
+  "data": [
+    { "name": "Home", "link": "/" },
+    { "name": "Product", "link": "/products" },
+    { "name": "Service", "link": "/services" },
+    { "name": "About Us", "link": "/about" },
+    { 
+      "name": "Partnership", "link": false, 
+      "menu": [
+        { "name": "VM Sports", "link": "/vmsport" }
+      ]
+    },
+    { "name": "Contact Us", "link": "/contact" }
+  ]
+}
