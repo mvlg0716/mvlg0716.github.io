@@ -1,19 +1,20 @@
 {
   "page": {
     "title": "公司產品",
-    "subtitle": "產品"
+    "subtitle": "產品",
+    "banner": "/img/bg/banner.png"
   },
   "nav": [
     {
-      "title": "ISGO-HK",
+      "title": "艾思科（香港）",
       "link": "#isgohk"
     },
     {
-      "title": "SD-ISGO",
+      "title": "艾司科（順德）",
       "link": "#sdisgo"
     },
     {
-      "title": "ISGO-HK",
+      "title": "灰常越野",
       "link": "#vmsports"
     },
     {

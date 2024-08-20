@@ -1,7 +1,8 @@
 {
   "page": {
     "title": "Product",
-    "subtitle": "product"
+    "subtitle": "product",
+    "banner": "/img/bg/banner.png"
   },
   "nav": [
     {

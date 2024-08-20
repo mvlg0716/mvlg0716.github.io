@@ -1,7 +1,8 @@
 {
   "page": {
-    "title": "公司介紹",
-    "subtitle": "關於我們"
+    "title": "",
+    "subtitle": "",
+    "banner": "/images/banner/banner_3.png"
   },
   "data": {
     "about": {

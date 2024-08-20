@@ -1,7 +1,8 @@
 {
   "page": {
-    "title": "About",
-    "subtitle": "about"
+    "title": "",
+    "subtitle": "",
+    "banner": "/images/banner/banner_3.png"
   },
   "data": {
     "about": {

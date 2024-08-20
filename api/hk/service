@@ -1,7 +1,8 @@
 {
   "page": {
-    "title": "服務",
-    "subtitle": "service"
+    "title": "",
+    "subtitle": "",
+    "banner": "/images/banner/banner_5.png"
   },
   "data": {
     "services": [

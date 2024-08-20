@@ -1,7 +1,8 @@
 {
   "page": {
-    "title": "Contact Us",
-    "subtitle": "contact"
+    "title": "",
+    "subtitle": "",
+    "banner": "/images/banner/banner_4.gif"
   },
   "data": [
     { "title": "Phone", "desc": "+852 59859007", "icon": "/images/icon/Icon_contact_phone.png" },

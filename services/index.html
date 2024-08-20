@@ -149,7 +149,7 @@ LanguageUtil.init();
 .pc-header {
   /* width: 1200px; */
   height: 7rem; line-height: 3rem; margin-top: -2rem;
-  position: fixed; 
+  /* position: fixed;  */
   z-index: 100; background-color: rgb(39, 39, 39);  opacity: 0.85; 
   width: 100%;
 }
@@ -392,7 +392,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 <div id="service">
   <!-- hero banner section start -->
-<section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
+<section class="hero_about_section d-flex align-items-center mb-0" :data-bgimg="page.banner">
   <div class="container">
     <div class="row">
       <div class="col-12">
