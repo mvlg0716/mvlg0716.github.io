@@ -1,8 +1,7 @@
 {
   "page": {
     "title": "",
-    "subtitle": "",
-    "banner": "/images/banner/banner_4.gif"
+    "subtitle": ""
   },
   "data": [
     { "title": "聯絡電話", "desc": "+852 59859007", "icon": "https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7838/15674014_1697869738.png?x-oss-process=image/resize,m_fixed,w_54,h_94,limit_0" },

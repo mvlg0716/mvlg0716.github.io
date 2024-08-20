@@ -1,8 +1,7 @@
 {
   "page": {
     "title": "Product",
-    "subtitle": "product",
-    "banner": "/images/banner/banner_1.jpg"
+    "subtitle": "product"
   },
   "nav": [
     {

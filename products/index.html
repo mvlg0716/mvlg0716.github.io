@@ -381,17 +381,11 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
   <div id="product">
   <!-- hero banner section start -->
-<section class="hero_about_section d-flex align-items-center mb-0" :data-bgimg="page.banner">
+<section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/images/banner/banner_1.jpg">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="banner-box hero_about_content">
-          <h2 
-            class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
-          >
-            {{ page.title }}<br>
-            <span>ISGOHK</span>
-          </h2>
         </div>
       </div>
     </div>
@@ -594,7 +588,6 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
         page: {
           title: '',
           subtitle: '',
-          banner: '',
         },
         nav: [],
       }
