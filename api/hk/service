@@ -2,5 +2,29 @@
   "page": {
     "title": "服務",
     "subtitle": "service"
+  },
+  "data": {
+    "services": [
+      {
+        "title": "創意工作坊",
+        "image": "/images/activity/act6.jpg",
+        "link": "/services/creativeWorkshop"
+      },
+      {
+        "title": "運動心理學",
+        "image": "/images/activity/act8.jpg",
+        "link": "/services/sportPsychology"
+      },
+      {
+        "title": "市集",
+        "image": "/images/activity/act9.jpg",
+        "link": "/services/bizarre"
+      },
+      {
+        "title": "包裝設計印刷",
+        "image": "/images/activity/act7.jpg",
+        "link": "/services/pkgDesign&printing"
+      }
+    ]
   }
 }

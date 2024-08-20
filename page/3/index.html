@@ -23,7 +23,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="ISGOHK">
-<meta property="og:url" content="https://www.isgohk.com/services/index.html">
+<meta property="og:url" content="https://www.isgohk.com/page/3/index.html">
 <meta property="og:site_name" content="ISGOHK">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="You Yi">
@@ -379,84 +379,92 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 
-  <style>
-.service-frame {
-  max-width: 800px;
-}
+  
 
-.service-item > h3 {
-  margin-bottom: 1rem;
-  text-align: center;
+<!-- slider section start -->
+<style scoped>
+/* Make the image fully responsive */
+.banner_about_section {
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 460px;
+  margin-bottom: 182px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner_about_section {
+    margin-bottom: 120px;
+    height: 440px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner_about_section {
+    height: 350px;
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner_about_section {
+    height: 280px;
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .banner_about_section {
+    height: 220px;
+  }
 }
 </style>
 
-<div id="service">
-  <!-- hero banner section start -->
-<section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="banner-box hero_about_content">
-          <h2 
-            class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
-          >
-            {{ page.title }}<br>
-            <span>ISGOHK</span>
-          </h2>
-        </div>
-      </div>
+<div id="slider-demo" class="carousel slide" data-ride="carousel">
+ 
+  <!-- 指示符 -->
+  <ul class="carousel-indicators">
+    <li data-target="#slider-demo" data-slide-to="0" class="active"></li>
+    <!-- <li data-target="#slider-demo" data-slide-to="1"></li>
+    <li data-target="#slider-demo" data-slide-to="2"></li> -->
+  </ul>
+ 
+  <!-- 轮播图片 -->
+  <div class="carousel-inner">
+    <!-- <div class="carousel-item active">
+      <img src="/images/banner/banner_1.jpg" srcset="/img/loading.gif" lazyload>
+    </div> -->
+    <section class="carousel-item active banner_about_section align-items-center mb-0" 
+      
+      data-bgimg="/images/banner/banner_1.jpg"></section>
+    <!-- <div class="carousel-item">
+      <img src="https://aimg8.dlssyht.cn/u/2253941/ev_user_module_content_tmp/7837/15672168_1697850354.png?t=4528" srcset="/img/loading.gif" lazyload>
     </div>
+    <div class="carousel-item">
+      <img src="https://aimg8.dlssyht.cn/u/2253941/ev_user_module_content_tmp/7837/15672168_1697850354.png?t=4528" srcset="/img/loading.gif" lazyload>
+    </div> -->
   </div>
-</section>
+ 
+  <!-- 左右切换按钮 -->
+  <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a> -->
+ 
+</div>
+<!-- slider section end -->
 
-
-  <!-- shop page section satrt -->
-  <div class="product_section mt-1 pt-5 pb-5">
-    <div class="container">
-        <div class="row service-frame m-auto">
-          <div class="col-12 col-md-6 p-3 service-item"
-            v-for="service in services"
-          >
-            <a :href="service.link">
-              <h3>{{ service.title }}</h3>
-              <hr>
-              <img :src="service.image" lazyload="false" />
-            </a>
-          </div>
-        </div>
-    </div>
-  </div>
+<div class="container p-0 col-12 d-flex justify-content-center">
+  <img class="col-lg-10" src="/images/banner/banner-intro-1.png" srcset="/img/loading.gif" lazyload/>
 </div>
 
-<script>
-Vue.createApp({
-  data() {
-    return {
-      page: {
-        title: '',
-        subtitle: ''
-      },
-      services: []
-    }
-  },
-  methods: {
-    renderList() {
-      let _this = this;
-      $.ajax({
-        url: ISGOHK.API.i18n('/service'),
-        dataType: 'json',
-        success(res) {
-          _this.page = res.page;
-          _this.services = res.data.services;
-        }
-      });
-    }
-  },
-  mounted() {
-    flushCenter.add(this.renderList);
-  },
-}).mount('#service');
-</script>
+<!-- product section end -->
+
+
+  
+
+
+
+
 
   
     

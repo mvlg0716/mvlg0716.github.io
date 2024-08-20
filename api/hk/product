@@ -2,5 +2,23 @@
   "page": {
     "title": "公司產品",
     "subtitle": "產品"
-  }
+  },
+  "nav": [
+    {
+      "title": "ISGO-HK",
+      "link": "#isgohk"
+    },
+    {
+      "title": "SD-ISGO",
+      "link": "#sdisgo"
+    },
+    {
+      "title": "ISGO-HK",
+      "link": "#vmsports"
+    },
+    {
+      "title": "創意產品",
+      "link": "#creative"
+    }
+  ]
 }

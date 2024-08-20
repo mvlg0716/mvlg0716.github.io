@@ -2,5 +2,23 @@
   "page": {
     "title": "Product",
     "subtitle": "product"
-  }
+  },
+  "nav": [
+    {
+      "title": "ISGO-HK",
+      "link": "#isgohk"
+    },
+    {
+      "title": "SD-ISGO",
+      "link": "#sdisgo"
+    },
+    {
+      "title": "ISGO-HK",
+      "link": "#vmsports"
+    },
+    {
+      "title": "Creative Products",
+      "link": "#creative"
+    }
+  ]
 }

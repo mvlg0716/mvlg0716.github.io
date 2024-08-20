@@ -7,7 +7,7 @@
     { 
       "name": "Partnership", "link": false, 
       "menu": [
-        { "name": "SD-ISGO", "link": "http://www.gdisgo.com/" },
+        { "name": "SD-ISGO", "link": "https://gdisgo.com.cn/" },
         { "name": "VM Sports", "link": "/vmsport" },
         { "name": "逸易升健康產業", "link": "/" },
         { "name": "灰常越野", "link": "http://www.verymuchsport.com" }

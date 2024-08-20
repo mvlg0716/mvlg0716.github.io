@@ -2,5 +2,29 @@
   "page": {
     "title": "Service",
     "subtitle": "service"
+  },
+  "data": {
+    "services": [
+      {
+        "title": "Creative Workshop",
+        "image": "/images/activity/act6.jpg",
+        "link": "/services/creativeWorkshop"
+      },
+      {
+        "title": "Sport Psychology",
+        "image": "/images/activity/act8.jpg",
+        "link": "/services/sportPsychology"
+      },
+      {
+        "title": "Bizarre",
+        "image": "/images/activity/act9.jpg",
+        "link": "/services/bizarre"
+      },
+      {
+        "title": "PKG Design and Printing",
+        "image": "/images/activity/act7.jpg",
+        "link": "/services/pkgDesign&printing"
+      }
+    ]
   }
 }

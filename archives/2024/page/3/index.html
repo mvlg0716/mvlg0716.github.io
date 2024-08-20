@@ -22,8 +22,8 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="ISGOHK">
-<meta property="og:url" content="https://www.isgohk.com/services/index.html">
+<meta property="og:title" content="Archives">
+<meta property="og:url" content="https://www.isgohk.com/archives/2024/page/3/index.html">
 <meta property="og:site_name" content="ISGOHK">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="You Yi">
@@ -33,7 +33,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>ISGOHK</title>
+  <title>Archives - ISGOHK</title>
 
   
 <!-- Fluid CSS
@@ -379,84 +379,46 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 
-  <style>
-.service-frame {
-  max-width: 800px;
-}
+  
 
-.service-item > h3 {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-</style>
-
-<div id="service">
-  <!-- hero banner section start -->
-<section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/img/bg/banner.png">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="banner-box hero_about_content">
-          <h2 
-            class="banner-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s"
-          >
-            {{ page.title }}<br>
-            <span>ISGOHK</span>
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- shop page section satrt -->
-  <div class="product_section mt-1 pt-5 pb-5">
-    <div class="container">
-        <div class="row service-frame m-auto">
-          <div class="col-12 col-md-6 p-3 service-item"
-            v-for="service in services"
-          >
-            <a :href="service.link">
-              <h3>{{ service.title }}</h3>
-              <hr>
-              <img :src="service.image" lazyload="false" />
-            </a>
-          </div>
-        </div>
-    </div>
-  </div>
+<div class="list-group">
+  <p class="h4">23 posts in total</p>
+  <hr>
+  
+  
+    
+      
+      <p class="h5">2024</p>
+    
+    <a href="/products/Product%202%204/" class="list-group-item list-group-item-action">
+      <time>08-19</time>
+      <div class="list-group-item-title">Leisure Chair Restaurant Back Sofa Office</div>
+    </a>
+  
+    
+    <a href="/products/Product%202%205/" class="list-group-item list-group-item-action">
+      <time>08-19</time>
+      <div class="list-group-item-title">Leisure Chair Restaurant Back Sofa Office</div>
+    </a>
+  
+    
+    <a href="/products/Product%202%206/" class="list-group-item list-group-item-action">
+      <time>08-19</time>
+      <div class="list-group-item-title">Leisure Chair Restaurant Back Sofa Office</div>
+    </a>
+  
 </div>
 
-<script>
-Vue.createApp({
-  data() {
-    return {
-      page: {
-        title: '',
-        subtitle: ''
-      },
-      services: []
-    }
-  },
-  methods: {
-    renderList() {
-      let _this = this;
-      $.ajax({
-        url: ISGOHK.API.i18n('/service'),
-        dataType: 'json',
-        success(res) {
-          _this.page = res.page;
-          _this.services = res.data.services;
-        }
-      });
-    }
-  },
-  mounted() {
-    flushCenter.add(this.renderList);
-  },
-}).mount('#service');
-</script>
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/archives/2024/page/2/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/2024/">1</a><a class="page-number" href="/archives/2024/page/2/">2</a><span class="page-number current">3</span>
+    </span>
+  </nav>
+
+
+
+
 
   
     
