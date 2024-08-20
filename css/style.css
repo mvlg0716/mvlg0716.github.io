@@ -26,7 +26,9 @@
 
 html, body {
   height: 100%;
+  margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -5373,6 +5375,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #ABABAB;
   margin-right: 7px;
 }
+
 .price_box span.current_price {
   color: #AB6E35;
 }
@@ -5566,7 +5569,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .product_price_box {
   margin-bottom: 8px;
 }
-.product_price_box span {
+.product_price_box span.old_price {
+  font-size: 24px;
+  line-height: 36px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #929292;
+  margin-right: 7px;
+}
+.product_price_box span.current_price {
   font-size: 24px;
   line-height: 36px;
   color: #AB6E35;

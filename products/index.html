@@ -379,7 +379,30 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 
-  <div id="product">
+  <style>
+
+.product-tab-bar-container {
+  overflow: hidden;
+}
+
+.product-tab-bar {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.product-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.product-tab-bar > li {
+  display: inline-block;
+  user-select: none;
+}
+</style>
+
+
+<div id="product">
   <!-- hero banner section start -->
 <section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/images/banner/banner_1.jpg">
   <div class="container">
@@ -397,11 +420,11 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
   <div class="shop_page_section shop_fullwidth">
     <div class="container d-flex justify-content-center">
       <div class="row col-lg-10 col-md-11 m-md-auto">
-        <div class="product_tab_button m-auto pb-5">
-          <ul class="nav justify-content-center" role="tablist" id="nav-tab">
+        <div class="product_tab_button product-tab-bar-container m-auto pb-5">
+          <ul class="nav product-tab-bar" role="tablist" id="nav-tab">
             <li v-for="item in nav">
               <a data-toggle="tab" :href="item.link" role="tab" aria-selected="false">
-                {{ item.title }}
+                <span>{{ item.title }}</span>
               </a>
             </li>
           </ul>
