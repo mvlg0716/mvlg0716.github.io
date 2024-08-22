@@ -198,6 +198,15 @@ LanguageUtil.init();
   }
 }
 
+
+.lang-item {
+  color: white;
+  padding: 0.25em;
+  font-size: 1.15em;
+}
+.lang-item > a:hover {
+  color: #ffd67d;
+}
 </style>
 
 
@@ -268,7 +277,15 @@ LanguageUtil.init();
             </div>
             <!--main menu end-->
             <div class="header__ridebar d-flex align-items-center">
-              <div class="dropdown">
+              <!-- Lang 2 -->
+              <div class="lang-item">
+                <a class="" @click="changeLanguage(language.list[1])">繁</a>
+                |
+                <a class="" @click="changeLanguage(language.list[0])">Eng</a>
+              </div>
+              
+              <!-- Lang 1 -->
+              <!-- <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"
                   style="background: transparent; box-shadow: none; border: 0;"
                 >{{ language.label }}</button>
@@ -281,7 +298,7 @@ LanguageUtil.init();
                   </a>
 
                 </div>
-              </div>  
+              </div>   -->
               <div class="canvas_open">
                 <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
               </div>
@@ -306,6 +323,7 @@ const NavHeaderApp = {
         label: 'Language',
         list: [
           {
+            short: 'En',
             label: 'English',
             key: 'en'
           },
@@ -314,6 +332,7 @@ const NavHeaderApp = {
           //   key: 'ja'
           // },
           {
+            short: '繁',
             label: '繁體中文',
             key: 'zh-HK'
           },
