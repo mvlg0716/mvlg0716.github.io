@@ -406,8 +406,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
   <div class="container pb-4 pt-4">
     <div class="row d-flex col-12 mt-3 mb-5 mt-md-5 mb-md-5 m-auto">
       <!-- Info -->
-      <div class="col-md-6 p-4">
-        <div class="d-flex flex-column">
+      <div class="col-md-6 p-2">
+        <div class="p-3 d-flex flex-column">
           <div>ISGO Technology Trading (Hong Kong) Company Limited</div>
           <br>
           <div>艾思科科技貿易（香港）有限公司</div>
@@ -422,11 +422,22 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
           <br>
           <div>Email: Isgott.hk@gmail.com</div>
         </div>
+        <div class="d-md-flex mt-3">
+          <div class="p-2 m-2" v-for="msg in message">
+            <b> 
+              > <a :href="msg.link">
+                {{ msg.title }}
+              </a>
+            </b>
+          </div>
+        </div>
       </div>
       <!-- Form -->
       <div class="col-12 col-md-6 d-flex flex-column">
-        <img class="pb-4 mt-3 col-11 m-auto" src="/images/googleMapAddress.png" srcset="/img/loading.gif" lazyload>
-        <a class="m-auto mb-3" target="_blank" rel="noopener" href="https://maps.app.goo.gl/6TbYimKmU6Y5jAAE6?g_st=com.google.maps.preview.copy">Google Map Link</a>
+        <img class="pb-4 mt-3 col-12 m-auto" src="/images/googleMapAddress.png" srcset="/img/loading.gif" lazyload>
+        <b class="m-auto mb-3" style="font-size: medium;">
+          > <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/6TbYimKmU6Y5jAAE6?g_st=com.google.maps.preview.copy">direction</a>
+        </b>
       </div>
     </div>
   </div>
@@ -443,7 +454,8 @@ Vue.createApp({
       },
       contact: {
         list: []
-      }
+      },
+      message: []
     }
   },
   methods: {
@@ -455,6 +467,7 @@ Vue.createApp({
         success(res) {
           _this.page = res.page;
           _this.contact.list = res.data;
+          _this.message = res.message;
         }
       });
     }

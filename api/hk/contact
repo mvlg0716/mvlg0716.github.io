@@ -7,5 +7,15 @@
     { "title": "聯絡電話", "desc": "+852 59859007", "icon": "https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7838/15674014_1697869738.png?x-oss-process=image/resize,m_fixed,w_54,h_94,limit_0" },
     { "title": "公司郵箱", "desc": " Isgott.hk@gmail.com", "icon": "https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7838/15674045_1697869909.png?x-oss-process=image/resize,m_fixed,w_94,h_94,limit_0" },
     { "title": "公司地址", "desc": "九龍城新蒲崗彩虹道206-208 號盛景工業大廈", "icon": "https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7838/15674061_1697869950.png?x-oss-process=image/resize,m_fixed,w_94,h_72,limit_0" }
+  ],
+  "message": [
+    {
+      "title": "留言 (国内專用链接)",
+      "link": "https://f.wps.cn/g/5i9iFOyx/"
+    },
+    {
+      "title": "留言 (英文版)",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfkTyNtYDr5f4_yVBKl0G_BuwxvqeiqKhrlvRyPQwixT2PENQ/viewform?usp=sf_link"
+    }
   ]
 }

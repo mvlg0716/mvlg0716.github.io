@@ -7,5 +7,15 @@
     { "title": "Phone", "desc": "+852 59859007", "icon": "/images/icon/Icon_contact_phone.png" },
     { "title": "E-mail", "desc": " Isgott.hk@gmail.com", "icon": "/images/icon/Icon_contact_email.png" },
     { "title": "Address", "desc": "Room 33, 5/F, Shing King Industrial Building, 206-208 Choi Hung Road, San Po Kong, Kowloon City", "icon": "/images/icon/Icon_contact_location.png" }
+  ],
+  "message": [
+    {
+      "title": "Leave a message (Chinese Version)",
+      "link": "https://f.wps.cn/g/5i9iFOyx/"
+    },
+    {
+      "title": "Leave a message (English Version)",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfkTyNtYDr5f4_yVBKl0G_BuwxvqeiqKhrlvRyPQwixT2PENQ/viewform?usp=sf_link"
+    }
   ]
 }
