@@ -440,13 +440,6 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
-  .text-ellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-  }
 </style>
 
 <div id="activites">
@@ -505,8 +498,8 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
                         <div class="text-ellipsis" v-if="act.deadline"
                           style="text-overflow: ellipsis; overflow: hidden; font-size: 17px;">
-                          <small style="color: black;" v-if="sub.pre">{{ sub.pre }}&nbsp;</small>
-                          <small>{{ act.deadline }}</small>
+                          <small style="color: black;" v-if="sub.pre" v-html="sub.pre"></small>
+                          <small v-html="act.deadline"></small>
                         </div>
                       </figure>
                     </article>
