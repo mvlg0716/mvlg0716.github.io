@@ -5348,14 +5348,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .product_content {
-  padding-top: 25px;
 }
 .product_content h4 {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 9px;
 }
 .product_content h4 a:hover {
   color: #AB6E35;

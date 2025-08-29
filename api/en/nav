@@ -1,18 +1,50 @@
 {
   "data": [
-    { "name": "Home", "link": "/" },
-    { "name": "Product", "link": "/products" },
-    { "name": "Service", "link": "/services" },
-    { "name": "About Us", "link": "/about" },
-    { 
-      "name": "Partnership", "link": false, 
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "Product",
+      "link": "/products"
+    },
+    {
+      "name": "Service",
+      "link": "/services"
+    },
+    {
+      "name": "About Us",
+      "link": "/about"
+    },
+    {
+      "name": "Activities",
+      "link": "/activities"
+    },
+    {
+      "name": "Partnership",
+      "link": false,
       "menu": [
-        { "name": "SD-ISGO", "link": "https://gdisgo.com.cn/" },
-        { "name": "VM Sports", "link": "/vmsport" },
-        { "name": "逸易升健康產業", "link": "/" },
-        { "name": "灰常越野", "link": "http://www.verymuchsport.com" }
+        {
+          "name": "SD-ISGO",
+          "link": "https://gdisgo.com.cn/"
+        },
+        {
+          "name": "VM Sports",
+          "link": "/vmsport"
+        },
+        {
+          "name": "逸易升健康產業",
+          "link": "/"
+        },
+        {
+          "name": "灰常越野",
+          "link": "http://www.verymuchsport.com"
+        }
       ]
     },
-    { "name": "Contact Us", "link": "/contact" }
+    {
+      "name": "Contact Us",
+      "link": "/contact"
+    }
   ]
 }
