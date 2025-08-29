@@ -408,10 +408,12 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
     white-space: nowrap;
     overflow-x: auto;
   }
+
   .product-tab-bar::-webkit-scrollbar {
     display: none;
   }
-  .product-tab-bar > li {
+
+  .product-tab-bar>li {
     display: inline-block;
     user-select: none;
   }
@@ -421,22 +423,24 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
     white-space: nowrap;
     overflow-x: auto;
   }
-  .product-tab-lbar > li {
+
+  .product-tab-lbar>li {
     display: inline-block;
     user-select: none;
   }
 
   .text-m-ellipsis {
     letter-spacing: 1px;
-    font-size:.75rem;
-    line-height:1.15rem;
-    color:#373639;
-    display:-webkit-box;
-    text-overflow:ellipsis;
+    font-size: .75rem;
+    line-height: 1.15rem;
+    color: #373639;
+    display: -webkit-box;
+    text-overflow: ellipsis;
     -webkit-line-clamp: 3;
-    -webkit-box-orient:vertical;
+    -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
   .text-ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -459,83 +463,66 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 </section>
 
 
-  <!-- shop page section satrt -->
-  <div class="shop_page_section shop_fullwidth">
-    <div class="container d-flex justify-content-center">
-      <div class="row col-lg-10 col-md-11 m-md-auto">
-        <div class="product_tab_button product-tab-bar-container m-auto pb-5">
-          <ul class="d-lg-none nav product-tab-bar" role="tablist" id="nav-tab">
-            <li v-for="(sub, index) in subs" :key="index">
-              <a
-                data-toggle="tab"
-                :href="`#${sub.id}`"
-                role="tab"
-                aria-selected="false"
-                @click="switchTab(index)"
-              >
-                <span>{{ this.isen() && sub.eng ? sub.eng : sub.sub }}</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="d-none d-lg-block nav product-tab-lbar" role="tablist" id="nav-tab">
-            <li v-for="(sub, index) in subs" :key="index">
-              <a
-                data-toggle="tab"
-                :href="`#${sub.id}`"
-                role="tab"
-                aria-selected="false"
-                @click="switchTab(index)"
-              >
-                <span>{{ this.isen() && sub.eng ? sub.eng : sub.sub }}</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="tab-content product_container col-lg-11 col-md-11 m-md-auto"
-        >
-          <div class="tab-pane fade"
-            v-for="(sub, index) in subs" :key="index"
-            :class="activeTab === index ? 'show active' : ''"
-            role="tabpanel">
-            <div class="product_gallery p-2">
-              <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-6"
-                  v-for="act in sub.activities"
-                >
-                  <article class="single_product">
-                    <figure>
-                      <div class="product_thumb">
-                        <a :href="act.link">
-                          <img :src="act.cover || '/img/avatar.png'" :alt="act.title" lazyload="false">
-                        </a>
-                      </div>
+    <!-- shop page section satrt -->
+    <div class="shop_page_section shop_fullwidth">
+      <div class="container d-flex justify-content-center">
+        <div class="row col-lg-10 col-md-11 m-md-auto">
+          <div class="product_tab_button product-tab-bar-container m-auto pb-5">
+            <ul class="d-lg-none nav product-tab-bar" role="tablist" id="nav-tab">
+              <li v-for="(sub, index) in subs" :key="index">
+                <a data-toggle="tab" :href="`#${sub.id}`" role="tab" aria-selected="false" @click="switchTab(index)">
+                  <span>{{ this.isen() && sub.eng ? sub.eng : sub.sub }}</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="d-none d-lg-block nav product-tab-lbar" role="tablist" id="nav-tab">
+              <li v-for="(sub, index) in subs" :key="index">
+                <a data-toggle="tab" :href="`#${sub.id}`" role="tab" aria-selected="false" @click="switchTab(index)">
+                  <span>{{ this.isen() && sub.eng ? sub.eng : sub.sub }}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content product_container col-lg-11 col-md-11 m-md-auto">
+            <div class="tab-pane fade" v-for="(sub, index) in subs" :key="index"
+              :class="activeTab === index ? 'show active' : ''" role="tabpanel">
+              <div class="product_gallery p-2">
+                <div class="row">
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6" v-for="act in sub.activities">
+                    <article class="single_product">
+                      <figure>
+                        <div class="product_thumb">
+                          <a :href="act.link">
+                            <img :src="act.cover || '/img/avatar.png'" :alt="act.title" lazyload="false">
+                          </a>
+                        </div>
 
-                      <div class="product_content" style="height: 65px;">
-                        <h4 class="mt-3 text-m-ellipsis">
-                          <a :href="act.link">{{ this.isen() && act.eng ? act.eng : act.title }}</a>
-                        </h4>
-                      </div>
-                      
-                      <div class="text-ellipsis" v-if="act.deadline" style="text-overflow: ellipsis; overflow: hidden; font-size: 17px;">
-                        <small style="color: black;" v-if="sub.pre">{{ sub.pre }}&nbsp;</small>
-                        <small>{{ act.deadline }}</small>
-                      </div>
-                    </figure>
-                  </article>
+                        <div class="product_content">
+                          <h4 class="mt-3 text-m-ellipsis">
+                            <a :href="act.link">{{ this.isen() && act.eng ? act.eng : act.title }}</a>
+                          </h4>
+                        </div>
+
+                        <div class="text-ellipsis" v-if="act.deadline"
+                          style="text-overflow: ellipsis; overflow: hidden; font-size: 17px;">
+                          <small style="color: black;" v-if="sub.pre">{{ sub.pre }}&nbsp;</small>
+                          <small>{{ act.deadline }}</small>
+                        </div>
+                      </figure>
+                    </article>
+                  </div>
                 </div>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- shop page section end -->
-  <div style="margin-bottom: 40px">
-    
+    <!-- shop page section end -->
+    <div style="margin-bottom: 40px">
+      
 
-  </div>
+    </div>
 </div>
 
 <script>
@@ -553,7 +540,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
       renderList() {
         let _this = this;
         $.ajax({
-          url: "/api/hk/activities.json",
+          url: "/api/activities.json",
           dataType: "json",
           success(res) {
             const subs = res.data.filter(sub => sub.enable);
@@ -571,7 +558,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
         return this.locale() == 'en';
       },
       locale() {
-         return ISGOHK['CONFIG']['LANG']
+        return ISGOHK['CONFIG']['LANG']
       }
     },
     mounted() {
@@ -579,7 +566,6 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
     },
   }).mount("#activites");
 </script>
-
 
   
     
