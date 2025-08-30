@@ -479,7 +479,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
           <div class="tab-content product_container col-lg-11 col-md-11 m-md-auto">
             <div class="tab-pane fade" v-for="(sub, index) in subs" :key="index"
               :class="activeTab === index ? 'show active' : ''" role="tabpanel">
-              <div class="product_gallery p-2">
+              <div class="product_gallery">
                 <div class="row">
                   <div class="col-lg-3 col-md-4 col-sm-6 col-6" v-for="act in sub.activities">
                     <article class="single_product">
