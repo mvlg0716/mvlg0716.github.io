@@ -536,6 +536,9 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
           // url: "/api/activities.json",
           "url": "https://raw.githubusercontent.com/mvlg0716/isgohk-repo/refs/heads/master/activities.json",
           dataType: "json",
+          headers: {
+            "Cache-Control": "no-cache",
+          },
           success(res) {
             const subs = res.data.filter(sub => sub.enable);
             _this.subs = subs;
