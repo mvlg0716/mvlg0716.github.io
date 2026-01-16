@@ -1,50 +1,112 @@
 {
   "data": [
     {
+      "enable": true,
+      "eng": "Home",
       "name": "首頁",
       "link": "/"
     },
     {
+      "enable": true,
+      "eng": "Product",
       "name": "產品",
       "link": "/products"
     },
     {
-      "name": "服務",
-      "link": "/services"
-    },
-    {
+      "enable": true,
+      "eng": "Activities",
       "name": "活動",
-      "link": "/activities"
-    },
-    {
-      "name": "公司介紹",
-      "link": "/about"
-    },
-    {
-      "name": "合作夥伴",
       "link": false,
       "menu": [
         {
-          "name": "顺德艾司科",
-          "link": "http://www.gdisgo.com/"
+          "enable": true,
+          "eng": "Sign Up",
+          "name": "活動/賽事報名",
+          "link": "/activities"
         },
         {
-          "name": "VM Sports",
-          "link": "/vmsport"
+          "enable": false,
+          "eng": "...",
+          "name": "ISGO巡迴賽",
+          "link": "/terms"
         },
         {
-          "name": "逸易升健康產業",
-          "link": "/"
+          "enable": false,
+          "eng": "...",
+          "name": "ISGO系列賽",
+          "link": "/contact"
         },
         {
-          "name": "灰常越野",
-          "link": "http://www.verymuchsport.com"
+          "enable": false,
+          "eng": "...",
+          "name": "City O",
+          "link": "/terms"
+        },
+        {
+          "enable": false,
+          "eng": "...",
+          "name": "Test Race",
+          "link": "/contact"
         }
       ]
     },
     {
-      "name": "聯絡我們",
-      "link": "/contact"
+      "enable": true,
+      "eng": "Company Info",
+      "name": "公司介紹",
+      "link": false,
+      "menu": [
+        {
+          "enable": true,
+          "eng": "About Us",
+          "name": "關於我們",
+          "link": "/about"
+        },
+        {
+          "enable": true,
+          "eng": "Terms",
+          "name": "服務條款",
+          "link": "/terms"
+        },
+        {
+          "enable": true,
+          "eng": "Contact Us",
+          "name": "聯絡我們",
+          "link": "/contact"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "eng": "Partners",
+      "name": "合作夥伴",
+      "link": false,
+      "menu": [
+        {
+          "enable": true,
+          "eng": "SDISGO",
+          "name": "顺德艾司科",
+          "link": "http://www.gdisgo.com/"
+        },
+        {
+          "enable": true,
+          "eng": "VM Sports",
+          "name": "VM Sports",
+          "link": "/vmsport"
+        },
+        {
+          "enable": true,
+          "eng": "逸易升健康產業",
+          "name": "逸易升健康產業",
+          "link": "/"
+        },
+        {
+          "enable": true,
+          "eng": "灰常越野",
+          "name": "灰常越野",
+          "link": "http://www.verymuchsport.com"
+        }
+      ]
     }
   ]
 }

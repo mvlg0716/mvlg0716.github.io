@@ -145,68 +145,84 @@ LanguageUtil.init();
 
   <div class="body_overlay"></div>
 
-<style>
-.pc-header {
-  /* width: 1200px; */
-  height: 7rem; line-height: 3rem; margin-top: -2rem;
-  /* position: fixed;  */
-  z-index: 100; background-color: rgb(39, 39, 39);  opacity: 0.85; 
-  width: 100%;
-}
-.pc-header-font {
-  color: white !important;
-}
-.pc-header-font:hover {
-  color: #ffd67d !important;
-}
-.pc-header-img {
-  height: 55px; z-index: 101;
-}
+<style scoped>
+  .pc-header {
+    /* width: 1200px; */
+    height: 7rem;
+    line-height: 3rem;
+    margin-top: -2rem;
+    /* position: fixed;  */
+    z-index: 100;
+    background-color: rgb(39, 39, 39);
+    opacity: 0.85;
+    width: 100%;
+  }
 
-@media (width  < 992px) {
-  /* .pc-header {
+  .pc-header-font {
+    color: white !important;
+  }
+
+  .pc-header-font:hover {
+    color: #ffd67d !important;
+  }
+
+  .pc-header-img {
+    height: 55px;
+    z-index: 101;
+  }
+
+  @media (width < 992px) {
+
+    /* .pc-header {
     margin-top: -15px;
     line-height: 24px;
     height: 80px;
   }  */
-  .pc-header {
-    padding-top: 5px;
-    line-height: 50px;
-    height: 100px;
-  } 
-  .pc-header-img {
-    height: 40px; z-index: 101;
+    .pc-header {
+      padding-top: 5px;
+      line-height: 50px;
+      height: 100px;
+    }
+
+    .pc-header-img {
+      height: 40px;
+      z-index: 101;
+    }
+
+    .pc-logo {
+      margin-top: -8px;
+      font-size: 24px;
+    }
+
+    .canvas_open a {
+      color: white;
+    }
   }
-  .pc-logo {
-    margin-top: -8px;
-    font-size: 24px;
+
+  @media (width < 768px) {
+    .pc-header {
+      position: relative;
+      padding-bottom: 10px;
+      line-height: 56px;
+      height: 95px;
+    }
+
+    .pc-header-img {
+      height: 42px;
+      z-index: 101;
+    }
   }
-  .canvas_open a {
+
+
+  .lang-item {
     color: white;
+    padding: 0.25em;
+    font-size: 1.15em;
   }
-}
 
-@media (width  < 768px) {
-  .pc-header {
-    position: relative; 
-    padding-bottom: 10px;
-    line-height: 56px;
-    height: 95px;
-  } 
-  .pc-header-img {
-    height: 42px; z-index: 101;
+  .lang-item>a:hover {
+    color: #ffd67d;
   }
-}
-
-
-.lang-item {
-  color: white;
-  padding: 0.25em;
-  font-size: 1.15em;
-}
-.lang-item > a:hover {
-  color: #ffd67d;
-}
 </style>
 
 
@@ -218,19 +234,17 @@ LanguageUtil.init();
         <div class="col-12">
           <div class="offcanvas_menu_wrapper" style="height:100vh;">
             <div class="canvas_close">
-              <a href="javascript:void(0)"><i class="ion-android-close"></i></a>  
+              <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
             </div>
             <div id="menu" class="text-left" style="color: black;">
               <ul class="offcanvas_main_menu">
-                <li :class="nav.link ? '' : 'menu-item-has-children'" 
-                  v-for="nav in navigation.data">
+                <li :class="nav.link ? '' : 'menu-item-has-children'" v-for="nav in navigation.data">
                   <a class="menu-expand" v-if="nav.link" :href="nav.link">{{ nav.name }}</a>
                   <a class="menu-expand" v-else>{{ nav.name }}
                     <span style="position: absolute; right: 1rem;">></span>
                   </a>
                   <ul class="sub-menu" v-if="!nav.link">
-                    <li class="menu-item-has-children" 
-                      v-for="subnav in nav.menu">
+                    <li class="menu-item-has-children" v-for="subnav in nav.menu">
                       <a :href="subnav.link">{{ subnav.name }}</a>
                     </li>
                   </ul>
@@ -245,7 +259,7 @@ LanguageUtil.init();
   <!--offcanvas menu area end-->
 
   <!--header area start-->
-  <header class="header_section mb-7 pc-header">
+  <header class="header_section mb-7 pc-header" style="z-index: 1050px !important;">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -262,7 +276,8 @@ LanguageUtil.init();
                   <li v-for="nav in navigation.data">
                     <a class="pc-header-font" :href="nav.link" v-if="nav.link">{{ nav.name }}</a>
                     <div class="dropdown" v-if="!nav.link" style="font-size: 15px;">
-                      <a class="pc-header-font dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                      <a class="pc-header-font dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
                         {{ nav.name }}
                       </a>
                       <div class="dropdown-menu">
@@ -279,11 +294,11 @@ LanguageUtil.init();
             <div class="header__ridebar d-flex align-items-center">
               <!-- Lang 2 -->
               <div class="lang-item">
-                <a class="" @click="changeLanguage(language.list[1])">繁</a>
+                <a class="" @click="changeLanguage(language.list[1])">中</a>
                 |
-                <a class="" @click="changeLanguage(language.list[0])">Eng</a>
+                <a class="" @click="changeLanguage(language.list[0])">ENG</a>
               </div>
-              
+
               <!-- Lang 1 -->
               <!-- <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"
@@ -313,84 +328,89 @@ LanguageUtil.init();
 
 
 <script>
-const NavHeaderApp = {
-  data() {
-    return {
-      navigation: {
-        data: [],
-      },
-      language: {
-        label: 'Language',
-        list: [
-          {
-            short: 'En',
-            label: 'English',
-            key: 'en'
-          },
-          // {
-          //   label: '日本語',
-          //   key: 'ja'
-          // },
-          {
-            short: '繁',
-            label: '繁體中文',
-            key: 'zh-HK'
-          },
-          // {
-          //   label: '简体中文',
-          //   key: 'zh-CN'
-          // },
-        ] 
-      }
-    }
-  },
-  methods: {
-    getLabelWithLang(lang) {
-      if (lang == 'en') {
-        return 'Language';
-      } else if (lang == 'zh-HK') {
-        return '語言';
-      // } else if (lang == 'zh-CN') {
-      //   return '语言';
-      } else {
-        return 'Language';
-      }
-    },
-    changeLanguage(lang) {
-      LanguageUtil.set(lang.key);
-      ISGOHK.LocalStorage.set('lang', lang.key);
-      flushCenter.flush();
-    },
-    renderNavList() {
-      let _this = this;
-      let lang = ISGOHK.LocalStorage.get('lang');
-      
-      this.language.label = this.getLabelWithLang(lang);
-
-      $.ajax({
-        url: ISGOHK.API.i18n('/nav'),
-        dataType: 'json',
-        success(res) {
-          _this.navigation.data = res.data.map(nav => {
-            if (nav.link) {
-              nav.link = ISGOHK.Link.i18n(nav.link);
-            } else {
-              nav.menu.map(subnav => {
-                return ISGOHK.Link.i18n(subnav.link);
-              })
-            }
-            return nav;
-          });
+  const NavHeaderApp = {
+    data() {
+      return {
+        navigation: {
+          data: [],
+        },
+        language: {
+          label: 'Language',
+          list: [
+            {
+              short: 'En',
+              label: 'English',
+              key: 'en'
+            },
+            // {
+            //   label: '日本語',
+            //   key: 'ja'
+            // },
+            {
+              short: '繁',
+              label: '繁體中文',
+              key: 'zh-HK'
+            },
+            // {
+            //   label: '简体中文',
+            //   key: 'zh-CN'
+            // },
+          ]
         }
-      });
-    }
-  },
-  mounted() {
-    flushCenter.add(this.renderNavList);
-  }
-}
+      }
+    },
+    methods: {
+      getLabelWithLang(lang) {
+        if (lang == 'en') {
+          return 'Language';
+        } else if (lang == 'zh-HK') {
+          return '語言';
+          // } else if (lang == 'zh-CN') {
+          //   return '语言';
+        } else {
+          return 'Language';
+        }
+      },
+      changeLanguage(lang) {
+        LanguageUtil.set(lang.key);
+        ISGOHK.LocalStorage.set('lang', lang.key);
+        flushCenter.flush();
+      },
+      renderNavList() {
+        let _this = this;
+        let lang = ISGOHK.LocalStorage.get('lang');
 
-Vue.createApp(NavHeaderApp).mount('#app-header');
+        this.language.label = this.getLabelWithLang(lang);
+
+        $.ajax({
+          // url: '/api/hk/nav',
+          url: 'https://raw.githubusercontent.com/mvlg0716/isgohk-repo/refs/heads/master/nav.json',
+          dataType: 'json',
+          success(res) {
+            isen = ISGOHK.CONFIG.LANG == 'en'
+            data = res.data.filter(nav => nav.enable).map(nav => {
+              nav.name = isen && nav.eng ? nav.eng : nav.name
+              if (nav.menu) {
+                nav.menu = nav.menu.filter(subnav => subnav.enable)
+                nav.menu.map(subnav => {
+                  subnav.name = isen && subnav.eng ? subnav.eng : subnav.name
+                  return subnav
+                })
+              }
+
+              return nav;
+            });
+            _this.navigation.data = data
+          }
+        });
+      }
+    },
+    mounted() {
+      flushCenter.add(this.renderNavList);
+    }
+  }
+
+  Vue.createApp(NavHeaderApp).mount('#app-header');
 </script>
 
 
@@ -398,9 +418,7 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
 
 
 
-  
-
-<div id="about">
+  <div id="about">
   <!-- hero banner section start -->
 <section class="hero_about_section d-flex align-items-center mb-0" data-bgimg="/images/page_banner/about_banner.png">
   <div class="container">
@@ -413,570 +431,80 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
   </div>
 </section>
 
-  
-  <!-- about vision section start -->
-  <section class="about_vision_section pt-5 pb-5" style="background-color: white;">
-    <div class="container">
-      <div class="row">
 
-        <div class="col-11 col-sm-10 col-md-9 col-lg-11 m-auto">
-          <div class="about_vision_inner d-flex align-items-center">
-            <p class="about-text wow fadeInUp text-justify" style="letter-spacing: 0.08em;" data-wow-delay="0.2s" data-wow-duration="1.1s" 
-            style="visibility: visible !important;"
-              v-html="about.detail"></p>
+    <!-- about vision section start -->
+    <section class="about_vision_section pt-5 pb-5" style="background-color: white;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-11 col-sm-10 col-md-9 col-lg-11 m-auto">
+            <div class="about_vision_inner d-flex align-items-center">
+              <p class="about-text wow fadeInUp text-justify" style="letter-spacing: 0.08em;" data-wow-delay="0.2s"
+                data-wow-duration="1.1s" style="visibility: visible !important;" v-html="about.detail"></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 </div>
 
 <script>
-Vue.createApp({
-  data() {
-    return {
-      page: {
-        title: '',
-        subtitle: '',
-        banner: '',
-      },
-      about: {
-        more: true,
-        profile: '',
-        detail: ''
-      },
-    }
-  },
-  methods: {
-    renderList() {
-      let _this = this;
-      $.ajax({
-        url: ISGOHK.API.i18n('/about'),
-        dataType: 'json',
-        success(res) {
-          const about = res.data.about;
-          _this.about.profile = about.profile;
-          _this.about.detail = _this.loadDetail(about.detail);
-          _this.page = res.page;
-        }
-      });
+  Vue.createApp({
+    data() {
+      return {
+        page: {
+          title: '',
+          subtitle: '',
+          banner: '',
+        },
+        about: {
+          more: true,
+          profile: '',
+          detail: ''
+        },
+      }
     },
-    loadContent(text) {
-      let lines = text.split('<br>');
-      return lines.map(line => {
-        let idx = line.indexOf(':') + 1;
-        let title = line.substring(0, idx);
-        let content = line.substring(idx);
-        return `<b>${title}</b> ${content}`
-      }).join('<br>');
-    },
-    loadDetail(list) {
-      const resultList = [];
-      
-      list.forEach((item) => {
-        const txt = `<h3>${item.title.toLocaleUpperCase()}</h3><hr><div>${this.loadContent(item.content)}</div>`;
-        resultList.push(txt);
-      })
+    methods: {
+      renderList() {
+        let _this = this;
+        $.ajax({
+          url: ISGOHK.API.i18n('/about'),
+          dataType: 'json',
+          success(res) {
+            const about = res.data.about;
+            _this.about.profile = about.profile;
+            _this.about.detail = _this.loadDetail(about.detail);
+            _this.page = res.page;
+          }
+        });
+      },
+      loadContent(text) {
+        let lines = text.split('<br>');
+        return lines.map(line => {
+          let idx = line.indexOf(':') + 1;
+          let title = line.substring(0, idx);
+          let content = line.substring(idx);
+          return `<b>${title}</b> ${content}`
+        }).join('<br>');
+      },
+      loadDetail(list) {
+        const resultList = [];
 
-      return resultList.join('<br><br>');
-    }
-  },
-  mounted() {
-    flushCenter.add(this.renderList);
-  },
-}).mount('#about');
+        list.forEach((item) => {
+          const txt = `<h3>${item.title.toLocaleUpperCase()}</h3><hr><div>${this.loadContent(item.content)}</div>`;
+          resultList.push(txt);
+        })
+
+        return resultList.join('<br><br>');
+      }
+    },
+    mounted() {
+      flushCenter.add(this.renderList);
+    },
+  }).mount('#about');
 </script>
 <!-- about vision section end -->
 <!-- intro section end -->
-
-
-<style>
-@media (width < 768px) {
-  .row-title-bar-box {
-    margin: 0px;
-    padding-top: 1.6rem;
-    padding-bottom: 1.8rem;
-    height: 4.5rem;
-  }
-  .row-title-bar > .box {
-    height: 0rem;
-    display: flex;
-    justify-content: center;
-  }
-  .row-title-bar > .box > img {
-    height: 1.22rem;
-    width: 1.22rem;
-    margin-right: 10px;
-  }
-  .row-title-bar > .box > h3 {
-    font-size: 1.22rem;
-    margin: 0px;
-    padding: 0px !important;
-    line-height: 1.22rem;
-  }
-}
-
-</style>
-<div class="row-title-bar-box breadcrumbs_area">
-  <div class="container">   
-    <div class="row">
-      <div class="row-title-bar col-12">
-        <div class="box breadcrumb_content text-center">
-          <img src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15672243_1697851581.png?x-oss-process=image/resize,m_fixed,w_39,h_39,limit_0" srcset="/img/loading.gif" lazyload>
-          <h3 class="text-uppercase">OUR CLIENT</h2>
-        </div> 
-      </div>
-    </div>
-  </div>         
-</div>
-
-<section class="pt-md-5 pb-5">
-  <div class="container d-flex justify-content-center">
-    <div class="row col-12 d-sm-flex">
-      
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c001-1.jpg" srcset="/img/loading.gif" lazyload alt="Baosteel Packaging">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Baosteel Packaging</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c002-1.jpg" srcset="/img/loading.gif" lazyload alt="COFCO">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">COFCO</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c003-1.png" srcset="/img/loading.gif" lazyload alt="SINOPEC">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">SINOPEC</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c004-1.jpg" srcset="/img/loading.gif" lazyload alt="GZSanrong">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">GZSanrong</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c005-1.png" srcset="/img/loading.gif" lazyload alt="KFC">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">KFC</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c006-1.png" srcset="/img/loading.gif" lazyload alt="Nestle">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Nestle</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c007-1.jpg" srcset="/img/loading.gif" lazyload alt="Shwe Pyinann">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Shwe Pyinann</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c008-1.jpg" srcset="/img/loading.gif" lazyload alt="Crown Color Painting">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Crown Color Painting</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c009-1.jpg" srcset="/img/loading.gif" lazyload alt="Coca Cola">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Coca Cola</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c010-1.jpg" srcset="/img/loading.gif" lazyload alt="广州市鸿志包装材料有限公司">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">广州市鸿志包装材料有限公司</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c011-1.jpg" srcset="/img/loading.gif" lazyload alt="Tubest">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Tubest</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c012-1.jpg" srcset="/img/loading.gif" lazyload alt="Gong Cha">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Gong Cha</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c013-1.jpg" srcset="/img/loading.gif" lazyload alt="广州美泰塑料包装有限公司">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">广州美泰塑料包装有限公司</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c014-1.png" srcset="/img/loading.gif" lazyload alt="Macdonald">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">Macdonald</h4>
-</div>
-
-      
-        <div class="wow fadeInUp m-auto 
-  col-5 col-lg-2 col-md-3 col-sm-5" data-wow-delay="0.1s" data-wow-duration="1.1s">
-  <div class="">
-    <div class="d-flex justify-content-center">
-      <img class="m-auto mt-3 mb-0 p-1" 
-        style="width: 100%; max-width: 120px; height: 110px;visibility: visible;"
-        src="/images/client/c015-1.jpg" srcset="/img/loading.gif" lazyload alt="58 Degree C Milk Tea">
-    </div>
-  </div>
-  <h4 style="text-align: center;visibility: visible;">58 Degree C Milk Tea</h4>
-</div>
-
-      
-    </div>
-  </div>
-</section>
-
-
-<style>
-@media (width < 768px) {
-  .row-title-bar-box {
-    margin: 0px;
-    padding-top: 1.6rem;
-    padding-bottom: 1.8rem;
-    height: 4.5rem;
-  }
-  .row-title-bar > .box {
-    height: 0rem;
-    display: flex;
-    justify-content: center;
-  }
-  .row-title-bar > .box > img {
-    height: 1.22rem;
-    width: 1.22rem;
-    margin-right: 10px;
-  }
-  .row-title-bar > .box > h3 {
-    font-size: 1.22rem;
-    margin: 0px;
-    padding: 0px !important;
-    line-height: 1.22rem;
-  }
-}
-
-</style>
-<div class="row-title-bar-box breadcrumbs_area">
-  <div class="container">   
-    <div class="row">
-      <div class="row-title-bar col-12">
-        <div class="box breadcrumb_content text-center">
-          <img src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15672243_1697851581.png?x-oss-process=image/resize,m_fixed,w_39,h_39,limit_0" srcset="/img/loading.gif" lazyload>
-          <h3 class="text-uppercase">CORPORATE CULTURE</h2>
-        </div> 
-      </div>
-    </div>
-  </div>         
-</div>
-<style scoped>
-.box-sq-75px {
-  width: 75px;
-  height: 75px;
-}
-.sbox-sq-200px {
-  min-height: 200px;
-  min-width: 200px;
-}
-</style>
-
-
-
-<div class="container">
-  <div class="row d-md-flex justify-content-center border-0 pt-4 pb-4">
-    
-      <div class="card m-3 p-2 col-md-3 shadow"
-        style="max-width: 18rem;">
-        <div class="card-img-top m-auto d-flex" 
-          style="padding: 3rem 3rem 1rem 3rem;">
-          <img class="box-sq-75px m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673836_1697868650.png?x-oss-process=image/resize,m_fixed,w_75,h_77,limit_0" srcset="/img/loading.gif" lazyload alt="">
-        </div>
-        <div class="card-body text-center">
-          <h3 style="letter-spacing: 0.35em;"><b>專業</b></h3>
-          <p class="card-text"></p>
-        </div>
-      </div>
-    
-      <div class="card m-3 p-2 col-md-3 shadow"
-        style="max-width: 18rem;">
-        <div class="card-img-top m-auto d-flex" 
-          style="padding: 3rem 3rem 1rem 3rem;">
-          <img class="box-sq-75px m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673875_1697868868.png?x-oss-process=image/resize,m_fixed,w_76,h_72,limit_0" srcset="/img/loading.gif" lazyload alt="">
-        </div>
-        <div class="card-body text-center">
-          <h3 style="letter-spacing: 0.35em;"><b>共融</b></h3>
-          <p class="card-text"></p>
-        </div>
-      </div>
-    
-      <div class="card m-3 p-2 col-md-3 shadow"
-        style="max-width: 18rem;">
-        <div class="card-img-top m-auto d-flex" 
-          style="padding: 3rem 3rem 1rem 3rem;">
-          <img class="box-sq-75px m-auto" src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15673902_1697868989.png?x-oss-process=image/resize,m_fixed,w_69,h_77,limit_0" srcset="/img/loading.gif" lazyload alt="">
-        </div>
-        <div class="card-body text-center">
-          <h3 style="letter-spacing: 0.35em;"><b>科技</b></h3>
-          <p class="card-text"></p>
-        </div>
-      </div>
-    
-  </div>
-</div>
-
-
-
-<style>
-@media (width < 768px) {
-  .row-title-bar-box {
-    margin: 0px;
-    padding-top: 1.6rem;
-    padding-bottom: 1.8rem;
-    height: 4.5rem;
-  }
-  .row-title-bar > .box {
-    height: 0rem;
-    display: flex;
-    justify-content: center;
-  }
-  .row-title-bar > .box > img {
-    height: 1.22rem;
-    width: 1.22rem;
-    margin-right: 10px;
-  }
-  .row-title-bar > .box > h3 {
-    font-size: 1.22rem;
-    margin: 0px;
-    padding: 0px !important;
-    line-height: 1.22rem;
-  }
-}
-
-</style>
-<div class="row-title-bar-box breadcrumbs_area">
-  <div class="container">   
-    <div class="row">
-      <div class="row-title-bar col-12">
-        <div class="box breadcrumb_content text-center">
-          <img src="https://aimg8.dlssyht.cn/u/2253941/module/simplepicbackground/7837/15672243_1697851581.png?x-oss-process=image/resize,m_fixed,w_39,h_39,limit_0" srcset="/img/loading.gif" lazyload>
-          <h3 class="text-uppercase">HONORARY QUALIFICATIONS</h2>
-        </div> 
-      </div>
-    </div>
-  </div>         
-</div>
-<style scoped>
-@media (width < 800px) {
-  .item-honor-img {
-      /* width: 300px;
-      height: 200px; */
-  }
-  .item-honor-img-frame {
-      /* width: 300px;
-      height: 260px; */
-      /* max-width: 260px; */
-  }
-  .item-honor-txt-frame {
-      /* width: 300px;
-      height: 100px; */
-  }
-  .item-honor-box {
-      /* width: 300px; */
-    width: 80%;
-  }
-}
-</style>
-<section class="our_team_section">
-  <div class="container">
-    <div class="row col-md-10 col-12 m-auto our_team_inner">
-      
-      
-        <div class="d-md-flex col-12 justify-content-around p-md-3">
-          
-          <div class="col-12 col-md-3 m-auto single_team wow fadeInUp item-honor-box" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="visibility: visible;"
-          >
-            <div class="team_thumb item-honor-img-frame d-flex m-auto">
-              <img class="item-honor-img m-auto" src="/images/cert/cert1.png" srcset="/img/loading.gif" lazyload alt="">
-            </div>
-            <!-- <div class="team_name item-honor-txt-frame m-auto pt-0">
-              <h3>最佳展示效果奖</h3>
-            </div> -->
-          </div>
-          
-          <div class="col-12 col-md-3 m-auto single_team wow fadeInUp item-honor-box" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="visibility: visible;"
-          >
-            <div class="team_thumb item-honor-img-frame d-flex m-auto">
-              <img class="item-honor-img m-auto" src="/images/cert/cert2.png" srcset="/img/loading.gif" lazyload alt="">
-            </div>
-            <!-- <div class="team_name item-honor-txt-frame m-auto pt-0">
-              <h3>最佳展示效果奖</h3>
-            </div> -->
-          </div>
-          
-          <div class="col-12 col-md-3 m-auto single_team wow fadeInUp item-honor-box" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="visibility: visible;"
-          >
-            <div class="team_thumb item-honor-img-frame d-flex m-auto">
-              <img class="item-honor-img m-auto" src="/images/cert/cert3.png" srcset="/img/loading.gif" lazyload alt="">
-            </div>
-            <!-- <div class="team_name item-honor-txt-frame m-auto pt-0">
-              <h3>最佳展示效果奖</h3>
-            </div> -->
-          </div>
-          
-        </div>
-      
-        <div class="d-md-flex col-12 justify-content-around p-md-3">
-          
-          <div class="col-12 col-md-3 m-auto single_team wow fadeInUp item-honor-box" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="visibility: visible;"
-          >
-            <div class="team_thumb item-honor-img-frame d-flex m-auto">
-              <img class="item-honor-img m-auto" src="/images/cert/cert4.png" srcset="/img/loading.gif" lazyload alt="">
-            </div>
-            <!-- <div class="team_name item-honor-txt-frame m-auto pt-0">
-              <h3>最佳展示效果奖</h3>
-            </div> -->
-          </div>
-          
-          <div class="col-12 col-md-3 m-auto single_team wow fadeInUp item-honor-box" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="visibility: visible;"
-          >
-            <div class="team_thumb item-honor-img-frame d-flex m-auto">
-              <img class="item-honor-img m-auto" src="/images/cert/cert5.png" srcset="/img/loading.gif" lazyload alt="">
-            </div>
-            <!-- <div class="team_name item-honor-txt-frame m-auto pt-0">
-              <h3>最佳展示效果奖</h3>
-            </div> -->
-          </div>
-          
-          <div class="col-12 col-md-3 m-auto single_team wow fadeInUp item-honor-box" data-wow-delay="0.1s" data-wow-duration="1.1s"
-            style="visibility: visible;"
-          >
-            <div class="team_thumb item-honor-img-frame d-flex m-auto">
-              <img class="item-honor-img m-auto" src="/images/cert/cert6.png" srcset="/img/loading.gif" lazyload alt="">
-            </div>
-            <!-- <div class="team_name item-honor-txt-frame m-auto pt-0">
-              <h3>最佳展示效果奖</h3>
-            </div> -->
-          </div>
-          
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-
-
-
 
   
     

@@ -145,68 +145,84 @@ LanguageUtil.init();
 
   <div class="body_overlay"></div>
 
-<style>
-.pc-header {
-  /* width: 1200px; */
-  height: 7rem; line-height: 3rem; margin-top: -2rem;
-  /* position: fixed;  */
-  z-index: 100; background-color: rgb(39, 39, 39);  opacity: 0.85; 
-  width: 100%;
-}
-.pc-header-font {
-  color: white !important;
-}
-.pc-header-font:hover {
-  color: #ffd67d !important;
-}
-.pc-header-img {
-  height: 55px; z-index: 101;
-}
+<style scoped>
+  .pc-header {
+    /* width: 1200px; */
+    height: 7rem;
+    line-height: 3rem;
+    margin-top: -2rem;
+    /* position: fixed;  */
+    z-index: 100;
+    background-color: rgb(39, 39, 39);
+    opacity: 0.85;
+    width: 100%;
+  }
 
-@media (width  < 992px) {
-  /* .pc-header {
+  .pc-header-font {
+    color: white !important;
+  }
+
+  .pc-header-font:hover {
+    color: #ffd67d !important;
+  }
+
+  .pc-header-img {
+    height: 55px;
+    z-index: 101;
+  }
+
+  @media (width < 992px) {
+
+    /* .pc-header {
     margin-top: -15px;
     line-height: 24px;
     height: 80px;
   }  */
-  .pc-header {
-    padding-top: 5px;
-    line-height: 50px;
-    height: 100px;
-  } 
-  .pc-header-img {
-    height: 40px; z-index: 101;
+    .pc-header {
+      padding-top: 5px;
+      line-height: 50px;
+      height: 100px;
+    }
+
+    .pc-header-img {
+      height: 40px;
+      z-index: 101;
+    }
+
+    .pc-logo {
+      margin-top: -8px;
+      font-size: 24px;
+    }
+
+    .canvas_open a {
+      color: white;
+    }
   }
-  .pc-logo {
-    margin-top: -8px;
-    font-size: 24px;
+
+  @media (width < 768px) {
+    .pc-header {
+      position: relative;
+      padding-bottom: 10px;
+      line-height: 56px;
+      height: 95px;
+    }
+
+    .pc-header-img {
+      height: 42px;
+      z-index: 101;
+    }
   }
-  .canvas_open a {
+
+
+  .lang-item {
     color: white;
+    padding: 0.25em;
+    font-size: 1.15em;
   }
-}
 
-@media (width  < 768px) {
-  .pc-header {
-    position: relative; 
-    padding-bottom: 10px;
-    line-height: 56px;
-    height: 95px;
-  } 
-  .pc-header-img {
-    height: 42px; z-index: 101;
+  .lang-item>a:hover {
+    color: #ffd67d;
   }
-}
-
-
-.lang-item {
-  color: white;
-  padding: 0.25em;
-  font-size: 1.15em;
-}
-.lang-item > a:hover {
-  color: #ffd67d;
-}
 </style>
 
 
@@ -218,19 +234,17 @@ LanguageUtil.init();
         <div class="col-12">
           <div class="offcanvas_menu_wrapper" style="height:100vh;">
             <div class="canvas_close">
-              <a href="javascript:void(0)"><i class="ion-android-close"></i></a>  
+              <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
             </div>
             <div id="menu" class="text-left" style="color: black;">
               <ul class="offcanvas_main_menu">
-                <li :class="nav.link ? '' : 'menu-item-has-children'" 
-                  v-for="nav in navigation.data">
+                <li :class="nav.link ? '' : 'menu-item-has-children'" v-for="nav in navigation.data">
                   <a class="menu-expand" v-if="nav.link" :href="nav.link">{{ nav.name }}</a>
                   <a class="menu-expand" v-else>{{ nav.name }}
                     <span style="position: absolute; right: 1rem;">></span>
                   </a>
                   <ul class="sub-menu" v-if="!nav.link">
-                    <li class="menu-item-has-children" 
-                      v-for="subnav in nav.menu">
+                    <li class="menu-item-has-children" v-for="subnav in nav.menu">
                       <a :href="subnav.link">{{ subnav.name }}</a>
                     </li>
                   </ul>
@@ -245,7 +259,7 @@ LanguageUtil.init();
   <!--offcanvas menu area end-->
 
   <!--header area start-->
-  <header class="header_section mb-7 pc-header">
+  <header class="header_section mb-7 pc-header" style="z-index: 1050px !important;">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -262,7 +276,8 @@ LanguageUtil.init();
                   <li v-for="nav in navigation.data">
                     <a class="pc-header-font" :href="nav.link" v-if="nav.link">{{ nav.name }}</a>
                     <div class="dropdown" v-if="!nav.link" style="font-size: 15px;">
-                      <a class="pc-header-font dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                      <a class="pc-header-font dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
                         {{ nav.name }}
                       </a>
                       <div class="dropdown-menu">
@@ -279,11 +294,11 @@ LanguageUtil.init();
             <div class="header__ridebar d-flex align-items-center">
               <!-- Lang 2 -->
               <div class="lang-item">
-                <a class="" @click="changeLanguage(language.list[1])">繁</a>
+                <a class="" @click="changeLanguage(language.list[1])">中</a>
                 |
-                <a class="" @click="changeLanguage(language.list[0])">Eng</a>
+                <a class="" @click="changeLanguage(language.list[0])">ENG</a>
               </div>
-              
+
               <!-- Lang 1 -->
               <!-- <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"
@@ -313,84 +328,89 @@ LanguageUtil.init();
 
 
 <script>
-const NavHeaderApp = {
-  data() {
-    return {
-      navigation: {
-        data: [],
-      },
-      language: {
-        label: 'Language',
-        list: [
-          {
-            short: 'En',
-            label: 'English',
-            key: 'en'
-          },
-          // {
-          //   label: '日本語',
-          //   key: 'ja'
-          // },
-          {
-            short: '繁',
-            label: '繁體中文',
-            key: 'zh-HK'
-          },
-          // {
-          //   label: '简体中文',
-          //   key: 'zh-CN'
-          // },
-        ] 
-      }
-    }
-  },
-  methods: {
-    getLabelWithLang(lang) {
-      if (lang == 'en') {
-        return 'Language';
-      } else if (lang == 'zh-HK') {
-        return '語言';
-      // } else if (lang == 'zh-CN') {
-      //   return '语言';
-      } else {
-        return 'Language';
-      }
-    },
-    changeLanguage(lang) {
-      LanguageUtil.set(lang.key);
-      ISGOHK.LocalStorage.set('lang', lang.key);
-      flushCenter.flush();
-    },
-    renderNavList() {
-      let _this = this;
-      let lang = ISGOHK.LocalStorage.get('lang');
-      
-      this.language.label = this.getLabelWithLang(lang);
-
-      $.ajax({
-        url: ISGOHK.API.i18n('/nav'),
-        dataType: 'json',
-        success(res) {
-          _this.navigation.data = res.data.map(nav => {
-            if (nav.link) {
-              nav.link = ISGOHK.Link.i18n(nav.link);
-            } else {
-              nav.menu.map(subnav => {
-                return ISGOHK.Link.i18n(subnav.link);
-              })
-            }
-            return nav;
-          });
+  const NavHeaderApp = {
+    data() {
+      return {
+        navigation: {
+          data: [],
+        },
+        language: {
+          label: 'Language',
+          list: [
+            {
+              short: 'En',
+              label: 'English',
+              key: 'en'
+            },
+            // {
+            //   label: '日本語',
+            //   key: 'ja'
+            // },
+            {
+              short: '繁',
+              label: '繁體中文',
+              key: 'zh-HK'
+            },
+            // {
+            //   label: '简体中文',
+            //   key: 'zh-CN'
+            // },
+          ]
         }
-      });
-    }
-  },
-  mounted() {
-    flushCenter.add(this.renderNavList);
-  }
-}
+      }
+    },
+    methods: {
+      getLabelWithLang(lang) {
+        if (lang == 'en') {
+          return 'Language';
+        } else if (lang == 'zh-HK') {
+          return '語言';
+          // } else if (lang == 'zh-CN') {
+          //   return '语言';
+        } else {
+          return 'Language';
+        }
+      },
+      changeLanguage(lang) {
+        LanguageUtil.set(lang.key);
+        ISGOHK.LocalStorage.set('lang', lang.key);
+        flushCenter.flush();
+      },
+      renderNavList() {
+        let _this = this;
+        let lang = ISGOHK.LocalStorage.get('lang');
 
-Vue.createApp(NavHeaderApp).mount('#app-header');
+        this.language.label = this.getLabelWithLang(lang);
+
+        $.ajax({
+          // url: '/api/hk/nav',
+          url: 'https://raw.githubusercontent.com/mvlg0716/isgohk-repo/refs/heads/master/nav.json',
+          dataType: 'json',
+          success(res) {
+            isen = ISGOHK.CONFIG.LANG == 'en'
+            data = res.data.filter(nav => nav.enable).map(nav => {
+              nav.name = isen && nav.eng ? nav.eng : nav.name
+              if (nav.menu) {
+                nav.menu = nav.menu.filter(subnav => subnav.enable)
+                nav.menu.map(subnav => {
+                  subnav.name = isen && subnav.eng ? subnav.eng : subnav.name
+                  return subnav
+                })
+              }
+
+              return nav;
+            });
+            _this.navigation.data = data
+          }
+        });
+      }
+    },
+    mounted() {
+      flushCenter.add(this.renderNavList);
+    }
+  }
+
+  Vue.createApp(NavHeaderApp).mount('#app-header');
 </script>
 
 
@@ -421,13 +441,13 @@ Vue.createApp(NavHeaderApp).mount('#app-header');
     </a>
   
     
-    <a href="/services/bizarre/" class="list-group-item list-group-item-action">
+    <a href="/services/creativeWorkshop/" class="list-group-item list-group-item-action">
       <time>09-19</time>
       <div class="list-group-item-title"></div>
     </a>
   
     
-    <a href="/services/creativeWorkshop/" class="list-group-item list-group-item-action">
+    <a href="/services/bizarre/" class="list-group-item list-group-item-action">
       <time>09-19</time>
       <div class="list-group-item-title"></div>
     </a>
